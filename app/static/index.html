@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disneyland Line Planner</title>
+<style>
+  :root {
+    --bg: #f7f6f2; --panel: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e3e1da;
+    --accent: #2f5bd3; --accent-ink: #ffffff; --wait: #c2410c; --ok: #15803d; --dl: #2f5bd3; --dca: #b45309;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141416; --panel: #1d1d20; --ink: #ececef; --muted: #9a9aa2; --line: #2e2e33;
+      --accent: #7b9bff; --accent-ink: #0b0b0d; --wait: #fb923c; --ok: #4ade80; --dl: #7b9bff; --dca: #f5b04a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header, main, footer { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 28px; }
+  h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  main { display: grid; grid-template-columns: 360px 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  label.f { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+  input, select, button { font: inherit; color: var(--ink); }
+  input[type=time], input[type=date], select, input[type=search] {
+    padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); width: 100%; }
+  input[type=search] { margin-bottom: 10px; }
+  .list { max-height: 520px; overflow: auto; border-top: 1px solid var(--line); }
+  .park { font-weight: 650; margin: 14px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+  .land { color: var(--muted); font-size: 12px; margin: 10px 0 2px; }
+  .ride { display: flex; align-items: center; gap: 8px; padding: 5px 2px; border-radius: 6px; cursor: pointer; }
+  .ride:hover { background: var(--bg); }
+  .ride .name { flex: 1; }
+  .ride .w { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--wait); min-width: 52px; text-align: right; }
+  .ride.closed { opacity: .45; }
+  .ride.closed .w { color: var(--muted); }
+  .bar { display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+  button.go { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px;
+              padding: 9px 16px; font-weight: 600; cursor: pointer; }
+  button.go:disabled { opacity: .5; cursor: default; }
+  .count { color: var(--muted); font-size: 13px; }
+  .empty { color: var(--muted); padding: 40px 10px; text-align: center; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+  @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat { border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+  .stat b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .note { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .note .good { color: var(--ok); font-weight: 600; }
+  svg.map { max-width: 100%; height: auto; margin: 0 auto; display: block; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+  table { width: 100%; border-collapse: collapse; margin-top: 14px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; }
+  td.n { color: var(--muted); }
+  .err { color: var(--wait); }
+  footer { color: var(--muted); font-size: 13px; padding-top: 24px; padding-bottom: 32px; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Disneyland Line Planner</h1>
+  <p class="sub">Pick the rides you want. A* search finds the order that gets you off the last one soonest.</p>
+</header>
+<main>
+  <section class="panel">
+    <div class="controls">
+      <label class="f">Start time <input type="time" id="start" value="09:00"></label>
+      <label class="f">Park closes <input type="time" id="close" value="23:59"></label>
+      <label class="f">Wait times
+        <select id="mode"><option value="live">Live right now</option><option value="predicted">Predicted</option></select>
+      </label>
+      <label class="f">Visit date <input type="date" id="date"></label>
+    </div>
+    <input type="search" id="q" placeholder="Filter rides">
+    <div class="list" id="list"><p class="empty">Loading rides…</p></div>
+    <div class="bar">
+      <button class="go" id="go" disabled>Plan my day</button>
+      <span class="count" id="count"></span>
+    </div>
+  </section>
+  <section class="panel" id="out"><p class="empty">Your route will show up here.</p></section>
+</main>
+<footer>
+  Powered by <a href="https://queue-times.com/" target="_blank" rel="noopener">Queue-Times.com</a>.
+  Ride locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL).
+  Walking times are estimates. Not affiliated with Disney.
+  · <a href="https://github.com/sophiazhangio/disney-line-planner" target="_blank" rel="noopener">Source</a>
+</footer>
+<script>
+const $ = (id) => document.getElementById(id);
+const PARKS = {16: "Disneyland", 17: "California Adventure"};
+let RIDES = [], START = null, MAX = 12;
+const picked = new Set();
+
+$("date").value = new Date().toLocaleDateString("en-CA");
+const clock = (m) => { m = Math.round(m); return `${String(Math.floor(m / 60) % 24).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+
+function renderList() {
+  const q = $("q").value.trim().toLowerCase();
+  let html = "", park = null, land = null;
+  for (const r of RIDES) {
+    if (r.single_rider) continue;
+    if (q && !r.name.toLowerCase().includes(q) && !r.land.toLowerCase().includes(q)) continue;
+    if (r.park_id !== park) { park = r.park_id; land = null; html += `<div class="park">${PARKS[park]}</div>`; }
+    if (r.land !== land) { land = r.land; html += `<div class="land">${esc(land)}</div>`; }
+    const closed = r.is_open === false;
+    const w = r.is_open == null ? "" : closed ? "closed" : `${r.wait} min`;
+    html += `<label class="ride${closed ? " closed" : ""}"><input type="checkbox" value="${r.id}" ${picked.has(r.id) ? "checked" : ""}>
+             <span class="name">${esc(r.name)}</span><span class="w">${w}</span></label>`;
+  }
+  $("list").innerHTML = html || `<p class="empty">No rides match.</p>`;
+}
+
+function updateCount() {
+  $("count").textContent = picked.size ? `${picked.size} picked${picked.size >= MAX ? " (max)" : ""}` : "";
+  $("go").disabled = picked.size === 0;
+}
+
+$("list").addEventListener("change", (e) => {
+  const id = Number(e.target.value);
+  if (e.target.checked) {
+    if (picked.size >= MAX) { e.target.checked = false; return; }
+    picked.add(id);
+  } else picked.delete(id);
+  updateCount();
+});
+$("q").addEventListener("input", renderList);
+
+function mapSvg(steps) {
+  const pts = RIDES.map((r) => [r.lat, r.lon]).concat([[START.lat, START.lon]]);
+  const lats = pts.map((p) => p[0]), lons = pts.map((p) => p[1]);
+  const [minLat, maxLat, minLon, maxLon] = [Math.min(...lats), Math.max(...lats), Math.min(...lons), Math.max(...lons)];
+  const k = Math.cos(33.81 * Math.PI / 180), pad = 20, maxW = 640, maxH = 420;
+  const sx = Math.min((maxW - 2 * pad) / ((maxLon - minLon) * k), (maxH - 2 * pad) / (maxLat - minLat));
+  const W = Math.round((maxLon - minLon) * k * sx + 2 * pad), H = Math.round((maxLat - minLat) * sx + 2 * pad);
+  const xy = (lat, lon) => [pad + (lon - minLon) * k * sx, pad + (maxLat - lat) * sx];
+  let s = `<svg class="map" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Route map">`;
+  for (const r of RIDES) {
+    const [x, y] = xy(r.lat, r.lon);
+    s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.5" fill="var(--${r.park_id === 16 ? "dl" : "dca"})" opacity=".3"><title>${esc(r.name)}</title></circle>`;
+  }
+  const path = [[START.lat, START.lon], ...steps.map((st) => [st.lat, st.lon])].map(([a, b]) => xy(a, b));
+  s += `<polyline points="${path.map((p) => p.map((v) => v.toFixed(1)).join(",")).join(" ")}" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" opacity=".75"/>`;
+  const [sx0, sy0] = path[0];
+  s += `<rect x="${sx0 - 6}" y="${sy0 - 6}" width="12" height="12" fill="var(--ink)"><title>Start: Esplanade</title></rect>`;
+  steps.forEach((st, i) => {
+    const [x, y] = path[i + 1];
+    s += `<g><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="10" fill="var(--accent)"/><text x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent-ink)">${i + 1}</text><title>${esc(st.ride)}</title></g>`;
+  });
+  return s + "</svg>";
+}
+
+function renderPlan(data) {
+  const p = data.plan, b = data.baseline_nearest;
+  const saved = b ? Math.round(b.finish - p.finish) : 0;
+  let html = `<div class="stats">
+    <div class="stat"><b>${clock(p.finish)}</b><span>done with last ride</span></div>
+    <div class="stat"><b>${Math.round(p.total_wait)} min</b><span>in lines</span></div>
+    <div class="stat"><b>${Math.round(p.total_walk)} min</b><span>walking</span></div>
+    <div class="stat"><b>${p.expanded}</b><span>states searched</span></div></div>
+    <p class="note">Waits: ${esc(data.waits)}. ${saved > 0 ? `<span class="good">${saved} min sooner</span> than always walking to the nearest ride.` : "Same as walking to the nearest ride each time."}</p>`;
+  html += mapSvg(p.steps);
+  html += `<table><thead><tr><th>#</th><th>Ride</th><th>Walk</th><th>Get in line</th><th>Wait</th><th>Off ride</th></tr></thead><tbody>`;
+  p.steps.forEach((s, i) => {
+    const rest = s.join_line - s.arrive > 0.5 ? ` <span class="count">(rest ${Math.round(s.join_line - s.arrive)} min)</span>` : "";
+    html += `<tr><td class="n">${i + 1}</td><td>${esc(s.ride)}</td><td>${Math.round(s.walk_minutes)} min</td>
+             <td>${clock(s.join_line)}${rest}</td><td>${Math.round(s.wait_minutes)} min</td><td>${clock(s.ride_end)}</td></tr>`;
+  });
+  $("out").innerHTML = html + "</tbody></table>";
+}
+
+$("go").addEventListener("click", async () => {
+  $("go").disabled = true;
+  $("out").innerHTML = `<p class="empty">Searching…</p>`;
+  try {
+    const res = await fetch("/api/plan", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ride_ids: [...picked], start: $("start").value, close: $("close").value,
+                            mode: $("mode").value, date: $("date").value}),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Request failed");
+    renderPlan(data);
+  } catch (e) {
+    $("out").innerHTML = `<p class="empty err">${esc(e.message)}</p>`;
+  } finally { updateCount(); }
+});
+
+fetch("/api/rides").then((r) => r.json()).then((d) => {
+  RIDES = d.rides; START = d.start; MAX = d.max_rides;
+  // Shareable links: ?rides=284,279&start=09:00&mode=live
+  const qs = new URLSearchParams(location.search);
+  for (const id of (qs.get("rides") || "").split(",").map(Number)) {
+    if (RIDES.some((r) => r.id === id) && picked.size < MAX) picked.add(id);
+  }
+  for (const k of ["start", "close", "mode", "date"]) if (qs.get(k)) $(k).value = qs.get(k);
+  renderList();
+  updateCount();
+  if (picked.size) $("go").click();
+}).catch(() => { $("list").innerHTML = `<p class="empty err">Could not load rides.</p>`; });
+</script>
+</body>
+</html>
