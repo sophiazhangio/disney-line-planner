@@ -1,0 +1,6 @@
+fastapi==0.120.*
+uvicorn[standard]
+pandas>=2.2
+scikit-learn>=1.5
+holidays>=0.60
+joblib

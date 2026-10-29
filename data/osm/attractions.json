@@ -1,0 +1,2651 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-29T23:09:00Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 247141462,
+  "lat": 33.8094008,
+  "lon": -117.9245408,
+  "tags": {
+    "air_conditioning": "no",
+    "fee": "Disneyland Park admittance required to enter Downtown Disney station",
+    "internet_access": "no",
+    "name": "Downtown Disney Monorail Station",
+    "old_name": "Disneyland Hotel Monorail Station",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "http://disneyland.disney.go.com/disneyland/disneyland-monorail/",
+    "tourism": "attraction",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 632049610,
+  "lat": 33.8125182,
+  "lon": -117.9221258,
+  "tags": {
+    "attraction": "amusement_ride",
+    "name": "Davy Crockett Explorer Canoes",
+    "note": "This attraction does not operate in inclement weather. (Rain)",
+    "old_name": "Indian War Canoes",
+    "sport": "canoe",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/davy-crocketts-explorer-canoes/",
+    "wikidata": "Q3019188",
+    "wikipedia": "en:Davy Crockett Explorer Canoes"
+  }
+},
+{
+  "type": "node",
+  "id": 632049617,
+  "lat": 33.8116787,
+  "lon": -117.9215453,
+  "tags": {
+    "attraction": "amusement_ride",
+    "name": "Rafts to Tom Sawyer Island"
+  }
+},
+{
+  "type": "node",
+  "id": 632049619,
+  "lat": 33.8127787,
+  "lon": -117.9186859,
+  "tags": {
+    "name": "Snow White's Grotto",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 632049629,
+  "lat": 33.8128508,
+  "lon": -117.9191172,
+  "tags": {
+    "attraction": "panorama",
+    "name": "Sleeping Beauty Castle Walkthrough",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/sleeping-beauty-castle-walkthrough/",
+    "wheelchair": "Alternative viewing experience available",
+    "wheelchair:description": "Attraction is not designed for wheelchair access, alternative viewing available"
+  }
+},
+{
+  "type": "node",
+  "id": 632049634,
+  "lat": 33.8130998,
+  "lon": -117.9188325,
+  "tags": {
+    "attraction": "dark_ride",
+    "manufacturer": "Cleveland Tram Rail Company",
+    "name": "Peter Pan's Flight",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/peter-pans-flight/",
+    "wheelchair": "Entrance through attraction exit. Guest must transfer to attraction boat",
+    "wikidata": "Q2916451",
+    "wikipedia": "en:Peter Pan's Flight"
+  }
+},
+{
+  "type": "node",
+  "id": 632049635,
+  "lat": 33.8133110,
+  "lon": -117.9187203,
+  "tags": {
+    "attraction": "dark_ride",
+    "manufacturer": "Arrow Development",
+    "name": "Mr. Toad's Wild Ride",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/mr-toads-wild-ride/",
+    "wheelchair": "Entrance through attraction exit. Guest must transfer to attraction car.",
+    "wikidata": "Q2777174",
+    "wikipedia": "en:Mr. Toad's Wild Ride"
+  }
+},
+{
+  "type": "node",
+  "id": 632049636,
+  "lat": 33.8130891,
+  "lon": -117.9191033,
+  "tags": {
+    "attraction": "dark_ride",
+    "manufacturer": "Arrow Development",
+    "minimum_height_requirement": "none",
+    "name": "Snow White's Enchanted Wish",
+    "old_name": "Snow White's Scary Adventures",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/snow-whites-scary-adventures/",
+    "wheelchair": "Entrance through attraction exit. Guest must transfer to attraction vehicle.",
+    "wikidata": "Q3487196",
+    "wikipedia": "en:Snow White's Enchanted Wish"
+  }
+},
+{
+  "type": "node",
+  "id": 632049642,
+  "lat": 33.8136913,
+  "lon": -117.9182201,
+  "tags": {
+    "attraction": "boat_ride",
+    "manufacturer": "WED Enterprises",
+    "name": "Storybook Land Canal Boats",
+    "old_name": "Canal Boats of the World",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/storybook-land-canal-boats/",
+    "wikidata": "Q3499909",
+    "wikipedia": "en:Storybook Land Canal Boats"
+  }
+},
+{
+  "type": "node",
+  "id": 632049645,
+  "lat": 33.8128307,
+  "lon": -117.9171763,
+  "tags": {
+    "attraction": "boat_ride",
+    "inside_submarine_view": "https://disneyland.disney.go.com/news/finding-nemo-submarine-panorama/",
+    "manufacturer": "General Dynamics;WED Enterprises;Walt Disney Imagineering",
+    "name": "Finding Nemo Submarine Voyage",
+    "old_name": "Viewliner; Submarine Voyage",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/finding-nemo-submarine-voyage/",
+    "wheelchair": "limited",
+    "wheelchair:description": "For those guests who experience problems with being in enclosed tight spaces or who cannot walk down a flight of stairs, there is an alternative viewing experience available.",
+    "wikidata": "Q2920234",
+    "wikipedia": "en:Finding Nemo Submarine Voyage"
+  }
+},
+{
+  "type": "node",
+  "id": 1149646295,
+  "lat": 33.8060579,
+  "lon": -117.9197626,
+  "tags": {
+    "air_conditioning": "yes",
+    "attraction": "walk_through",
+    "minimum_height_requirement": "none",
+    "name": "The Bakery Tour",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneys-california-adventure/bakery-tour/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1149646322,
+  "lat": 33.8072288,
+  "lon": -117.9176062,
+  "tags": {
+    "air_conditioning": "yes",
+    "minimum_height_requirement": "none",
+    "name": "Sorcerer's Workshop",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/sorcerers-workshop/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1149646454,
+  "lat": 33.8059975,
+  "lon": -117.9226894,
+  "tags": {
+    "attraction": "drop_tower",
+    "manufacturer": "Intamin Amusement Rides",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Jumpin' Jellyfish",
+    "note": "This attraction does not operate during performances of World of Color.",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/jumpin-jellyfish/",
+    "wikidata": "Q1929942",
+    "wikimedia_commons": "File:Jumpin_Jellyfish.jpg",
+    "wikipedia": "en:Jumpin' Jellyfish"
+  }
+},
+{
+  "type": "node",
+  "id": 1149646876,
+  "lat": 33.8047672,
+  "lon": -117.9223500,
+  "tags": {
+    "leisure": "amusement_arcade",
+    "name": "Games of Pixar Pier",
+    "old_name": "Games of the Boardwalk",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/games-pixar-pier/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1231834589,
+  "lat": 33.8122417,
+  "lon": -117.9205780,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "cargo": "passengers",
+    "ferry": "yes",
+    "name": "Frontierland Landing",
+    "note": "Both Ships do not operate during performances of Fantasmic. The Columbia does not operate in inclement weather. (Rain)",
+    "operator": "Disney Parks and Resorts",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "wheelchair": "limited",
+    "wikidata": "Q3461623",
+    "wikipedia": "en:Sailing Ship Columbia"
+  }
+},
+{
+  "type": "node",
+  "id": 1231987282,
+  "lat": 33.8107105,
+  "lon": -117.9188509,
+  "tags": {
+    "addr:housenumber": "217",
+    "addr:street": "Main Street",
+    "amenity": "cinema",
+    "designation": "http://disneyland.disney.go.com/disneyland/main-street-cinema/",
+    "name": "Main Street Cinema House",
+    "tourism": "attraction",
+    "wikidata": "Q3278282",
+    "wikipedia": "en:Main Street Cinema"
+  }
+},
+{
+  "type": "node",
+  "id": 1232033931,
+  "lat": 33.8074309,
+  "lon": -117.9172966,
+  "tags": {
+    "amenity": "theatre",
+    "minimum_height_requirement": "none",
+    "name": "Animation Academy",
+    "show": "live_demo",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disney-california-adventure/animation-academy/",
+    "wikidata": "Q11320084",
+    "wikipedia": "en:Animation Academy"
+  }
+},
+{
+  "type": "node",
+  "id": 1232033966,
+  "lat": 33.8137225,
+  "lon": -117.9192371,
+  "tags": {
+    "attraction": "train",
+    "manufacturer": "Arrow Development",
+    "minimum_height_requirement": "none",
+    "name": "Casey Jr. Circus Train",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/casey-jr-circus-train/",
+    "wheelchair:description": "Entrance through attraction’s exit ramp. Guest must transfer on/in-to train car bench.",
+    "wikidata": "Q2521960",
+    "wikipedia": "en:Casey Jr. Circus Train"
+  }
+},
+{
+  "type": "node",
+  "id": 1256492372,
+  "lat": 33.8122791,
+  "lon": -117.9198049,
+  "tags": {
+    "name": "Shooting Exposition",
+    "old_name": "Frontierland Shooting Gallery; Frontierland Shootin’ Arcade",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 1424937325,
+  "lat": 33.8125030,
+  "lon": -117.9182840,
+  "tags": {
+    "attraction": "meet_and_greet",
+    "minimum_height_requirement": "none",
+    "name": "Pixie Hollow",
+    "old_name": "House of the Future;King Triton Gardens",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/entertainment/disneyland/pixie-hollow-tinkerbell-fairy-friends/"
+  }
+},
+{
+  "type": "node",
+  "id": 1428605069,
+  "lat": 33.8104444,
+  "lon": -117.9193949,
+  "tags": {
+    "addr:housename": "105 A",
+    "addr:street": "Main Street",
+    "name": "Disneyland Fire Department",
+    "tourism": "attraction",
+    "wikidata": "Q68531620"
+  }
+},
+{
+  "type": "node",
+  "id": 1430268903,
+  "lat": 33.8133523,
+  "lon": -117.9191864,
+  "tags": {
+    "attraction": "dark_ride",
+    "manufacturer": "Walt Disney Imagineering",
+    "minimum_height_requirement": "none",
+    "name": "Pinocchio's Daring Journey",
+    "old_name": "Mickey Mouse Club Theater; Fantasyland Theater",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/pinocchios-daring-journey/",
+    "wheelchair": "Entrance through attraction exit. Guest must transfer to attraction vehicle.",
+    "wikidata": "Q3066622"
+  }
+},
+{
+  "type": "node",
+  "id": 1444178750,
+  "lat": 33.8131608,
+  "lon": -117.9183660,
+  "tags": {
+    "attraction": "dark_ride",
+    "manufacturer": "Arrow Development",
+    "minimum_height_requirement": "none",
+    "name": "Alice in Wonderland",
+    "note": "This attraction does not operate in inclement weather. (Rain)",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/alice-in-wonderland/",
+    "wikidata": "Q2836727",
+    "wikipedia": "en:Alice in Wonderland (Disneyland attraction)"
+  }
+},
+{
+  "type": "node",
+  "id": 1446696511,
+  "lat": 33.8102024,
+  "lon": -117.9189570,
+  "tags": {
+    "name": "Town Square",
+    "public_transport": "stop_position",
+    "railway": "tram_stop",
+    "tourism": "attraction",
+    "tram": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2118852163,
+  "lat": 33.8128226,
+  "lon": -117.9166746,
+  "tags": {
+    "alt_name": "Disneyland Monorail",
+    "attraction": "train",
+    "historic": "monument",
+    "layer": "1",
+    "name": "Tomorrowland Monorail Station",
+    "note": "The final departing monorail leaves at exactly park closing. Please be at station before closing to board final monorail for a one-way trip to Downtown Disney Station.",
+    "note:historic": "First Daily operating monorail-type rail system to open in the entire Western Hemisphere",
+    "public_transport": "station",
+    "railway": "station",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/disneyland-monorail/",
+    "wikidata": "Q3030502"
+  }
+},
+{
+  "type": "node",
+  "id": 2353146260,
+  "lat": 33.8072888,
+  "lon": -117.9173270,
+  "tags": {
+    "air_conditioning": "yes",
+    "attraction": "meet_and_greet",
+    "contact:website": "https://disneyland.disney.go.com/entertainment/disney-california-adventure/character-meet-anna-and-elsa-frozen/",
+    "minimum_height_requirement": "none",
+    "name": "Character Close-Up with Anna & Elsa",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 3167856921,
+  "lat": 33.8071934,
+  "lon": -117.9206395,
+  "tags": {
+    "attraction": "river_rafting",
+    "contact:yelp": "http://www.yelp.com/biz/grizzly-river-run-anaheim-3",
+    "lightning_lane": "yes",
+    "manufacturer": "Intamin Amusement Rides",
+    "minimum_height_requirement": "42 in. (107 cm.)",
+    "name": "Grizzly River Run",
+    "short_name": "GRR",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/grizzly-river-run/",
+    "wheelchair": "limited",
+    "wikidata": "Q3116857",
+    "wikimedia_commons": "File:Grizzly_River_Geysers.JPG",
+    "wikipedia": "en:Grizzly River Run"
+  }
+},
+{
+  "type": "node",
+  "id": 13482591163,
+  "lat": 33.8085157,
+  "lon": -117.9191080,
+  "tags": {
+    "man_made": "trolley_car",
+    "name": "Red Car Trolley",
+    "tourism": "attraction",
+    "vehicle:type": "trolley_car"
+  }
+},
+{
+  "type": "way",
+  "id": 30658951,
+  "center": {
+    "lat": 33.8120246,
+    "lon": -117.9164814
+  },
+  "tags": {
+    "addr:housename": "Tomorrowland Expo Center Show Building",
+    "addr:housenumber": "360",
+    "addr:street": "Tomorrowland Way",
+    "attraction": "walk_through",
+    "building": "yes",
+    "height": "7",
+    "layer": "4",
+    "minimum_height_requirement": "none",
+    "name": "Star Wars: Launch Bay",
+    "note": "first floor",
+    "old_building_name": "Tomorrowland's Carousel Theater",
+    "old_name": "Skyway to Fantasyland; Carousel of Progress; America Sings; Innoventions",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/star-wars-launch-bay/"
+  }
+},
+{
+  "type": "way",
+  "id": 49824967,
+  "center": {
+    "lat": 33.8076741,
+    "lon": -117.9166149
+  },
+  "tags": {
+    "addr:housenumber": "29",
+    "addr:street": "Sunset Boulevard",
+    "alt_name": "Stage 29",
+    "amenity": "theatre",
+    "attraction": "show",
+    "building": "yes",
+    "height": "15",
+    "name": "Hyperion Theater",
+    "old_name": "Steps in Time;The Power of Blast;Disney's Aladdin – A Musical Spectacular; Disney's Frozen – A Musical Spectacular;Rogers: The Musical",
+    "show": "live_performance",
+    "tourism": "attraction",
+    "wikidata": "Q14682443",
+    "wikipedia": "en:Hyperion Theater"
+  }
+},
+{
+  "type": "way",
+  "id": 49884392,
+  "center": {
+    "lat": 33.8113120,
+    "lon": -117.9164494
+  },
+  "tags": {
+    "addr:housename": "Grand Canyon Diorama Show Building",
+    "alt_name": "Ticketing/Currency Services",
+    "building": "yes",
+    "height": "5",
+    "name": "Grand Canyon Diorama",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneyland/disneyland-railroad/",
+    "wikipedia": "en:Primeval World#The Grand Canyon.2FPrimeval World diorama"
+  }
+},
+{
+  "type": "way",
+  "id": 49884532,
+  "center": {
+    "lat": 33.8155693,
+    "lon": -117.9190202
+  },
+  "tags": {
+    "addr:housename": "Minnie's House Show Building",
+    "addr:housenumber": "2",
+    "addr:street": "Neighborhood Lane",
+    "attraction": "walk_through",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/minnie-mouses-house-anaheim",
+    "name": "Minnie's House",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/minnies-house/"
+  }
+},
+{
+  "type": "way",
+  "id": 77339841,
+  "center": {
+    "lat": 33.8150188,
+    "lon": -117.9176280
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "\"It's a Small World\"",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 100300449,
+  "center": {
+    "lat": 33.8076681,
+    "lon": -117.9202650
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "2",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 100300462,
+  "center": {
+    "lat": 33.8076646,
+    "lon": -117.9203682
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "bridge": "viaduct",
+    "layer": "2",
+    "oneway": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 107141625,
+  "center": {
+    "lat": 33.8053662,
+    "lon": -117.9218418
+  },
+  "tags": {
+    "alt_name": "World of Color - Season of Light",
+    "amenity": "theatre",
+    "contact:yelp": "https://www.yelp.com/biz/world-of-color-celebrate-anaheim-4",
+    "designation": "Paradise Bay",
+    "name": "World of Color - One",
+    "note": "Glow with the Show Location",
+    "old_name": "LuminAria—a Holiday Spectacular;World of Color – Celebrate! The Wonderful World of Walt Disney",
+    "opening_hours:url": "https://disneyland.disney.go.com/calendars/day/",
+    "short_name": "WoC",
+    "show": "water_fountain",
+    "start_date": "June 6, 2011",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/entertainment/disney-california-adventure/world-of-color-one/"
+  }
+},
+{
+  "type": "way",
+  "id": 107280551,
+  "center": {
+    "lat": 33.8152217,
+    "lon": -117.9194907
+  },
+  "tags": {
+    "addr:housename": "Chip ‘n’ Dale’s GADGETcoaster Show Building",
+    "addr:housenumber": "5",
+    "addr:street": "Neighborhood Lane",
+    "attraction": "roller_coaster",
+    "building": "yes",
+    "layer": "1",
+    "manufacturer": "Vekoma Rides Manufacturing B.V.",
+    "minimum_height_requirement": "35in (89cm)",
+    "name": "Chip ‘n’ Dale’s GADGETcoaster",
+    "old_name": "Gadget's Go Coaster",
+    "roller_coaster": "station",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/chip-n-dales-gadget-coaster/",
+    "wheelchair": "limited",
+    "wheelchair:description": "Enter through exit. Person must transfer into car.",
+    "wikidata": "Q3094227",
+    "wikipedia": "en:Gadget's Go Coaster"
+  }
+},
+{
+  "type": "way",
+  "id": 107280556,
+  "center": {
+    "lat": 33.8130739,
+    "lon": -117.9178462
+  },
+  "tags": {
+    "attraction": "roller_coaster",
+    "building": "yes",
+    "designer": "WED Enterprises",
+    "height": "7.62",
+    "lightning_lane": "yes",
+    "manufacturer": "Arrow Development",
+    "material": "steel",
+    "min_height_requirment": "42 in. (107 cm)",
+    "name": "Matterhorn Bobsleds",
+    "single_rider": "yes",
+    "tourism": "attraction",
+    "tracklayout": "dual-tracked",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/matterhorn-bobsleds/",
+    "wheelchair": "limited",
+    "wikidata": "Q1849003",
+    "wikipedia": "en:Matterhorn Bobsleds"
+  }
+},
+{
+  "type": "way",
+  "id": 107526203,
+  "center": {
+    "lat": 33.8138200,
+    "lon": -117.9188387
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 107526234,
+  "center": {
+    "lat": 33.8125248,
+    "lon": -117.9221265
+  },
+  "tags": {
+    "attraction": "canoes",
+    "name": "Davy Crockett's Explorer Canoes",
+    "sport": "canoe",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/davy-crocketts-explorer-canoes/"
+  }
+},
+{
+  "type": "way",
+  "id": 107526246,
+  "center": {
+    "lat": 33.8138482,
+    "lon": -117.9189927
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "Storybook Land Canal Boats",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 107526356,
+  "center": {
+    "lat": 33.8137101,
+    "lon": -117.9185542
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "Storybook Land Canal Boats",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 107804130,
+  "center": {
+    "lat": 33.8120947,
+    "lon": -117.9171801
+  },
+  "tags": {
+    "alt_name": "Tomorrlanding",
+    "building": "yes",
+    "height": "9",
+    "layer": "2",
+    "name": "Observatron",
+    "old_name": "Court of Flags; Astro-Jets; Tomorrowland Jets",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 107804132,
+  "center": {
+    "lat": 33.8112360,
+    "lon": -117.9218824
+  },
+  "tags": {
+    "building": "roof",
+    "name": "New Orleans Square Train Station",
+    "old_name": "Frontierland Station",
+    "operator": "Disneyland Railroad",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/disneyland-railroad/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 108426829,
+  "center": {
+    "lat": 33.8151753,
+    "lon": -117.9190637
+  },
+  "tags": {
+    "addr:street": "7",
+    "alt_name": "Miss Daisy",
+    "building": "yes",
+    "layer": "1",
+    "name": "Donald's Boat",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 108865231,
+  "center": {
+    "lat": 33.8064353,
+    "lon": -117.9228677
+  },
+  "tags": {
+    "attraction": "roller_coaster",
+    "building": "roof",
+    "contact:yelp": "http://www.yelp.com/biz/goofys-sky-school-disneyland",
+    "layer": "2",
+    "lightning_lane": "yes",
+    "manufacturer": "MACK Rides",
+    "minimum_height_requirement": "42in (107cm)",
+    "name": "Goofy's Sky School",
+    "old_name": "Mulholland Madness",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/goofys-sky-school/",
+    "wheelchair": "limited",
+    "wikidata": "Q3327600",
+    "wikipedia": "en:Goofy's Sky School"
+  }
+},
+{
+  "type": "way",
+  "id": 109506979,
+  "center": {
+    "lat": 33.8134764,
+    "lon": -117.9182773
+  },
+  "tags": {
+    "attraction": "amusement_ride",
+    "manufacturer": "Arrow Development",
+    "name": "Mad Tea Party",
+    "note": "This attraction does not operate in inclement weather. (Rain)",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/mad-tea-party/",
+    "wheelchair:description": "Entrance for this attraction is through the regular exit closet to the Parade Route (Matterhorn Way). Wheelchair must transfer into tea cup.",
+    "wikidata": "Q2611856",
+    "wikipedia": "en:Mad Tea Party"
+  }
+},
+{
+  "type": "way",
+  "id": 112299767,
+  "center": {
+    "lat": 33.8069296,
+    "lon": -117.9200197
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "3",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10"
+  }
+},
+{
+  "type": "way",
+  "id": 112299770,
+  "center": {
+    "lat": 33.8068668,
+    "lon": -117.9205861
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "bridge": "yes",
+    "layer": "4",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 113878103,
+  "center": {
+    "lat": 33.8044835,
+    "lon": -117.9217794
+  },
+  "tags": {
+    "air_conditioning": "yes",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/toy-story-midway-mania-anaheim",
+    "height": "6",
+    "image": "https://commons.wikimedia.org/wiki/File:Paradisepier.JPG",
+    "lightning_lane": "yes",
+    "manufacturer": "ETF Ride Systems",
+    "name": "Toy Story Midway Mania!",
+    "old_name": "Malibu-Ritos; Pacific Ocean Photos!; Strips, Dips ’n’ Chips",
+    "short_name": "TSMM",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/toy-story-mania/",
+    "wikidata": "Q474993",
+    "wikipedia": "en:Toy Story Mania!"
+  }
+},
+{
+  "type": "way",
+  "id": 120110329,
+  "center": {
+    "lat": 33.8068137,
+    "lon": -117.9216672
+  },
+  "tags": {
+    "attraction": "slide",
+    "covered": "yes",
+    "layer": "2",
+    "name": "Hollar"
+  }
+},
+{
+  "type": "way",
+  "id": 120110330,
+  "center": {
+    "lat": 33.8068317,
+    "lon": -117.9216524
+  },
+  "tags": {
+    "attraction": "slide",
+    "covered": "yes",
+    "layer": "2",
+    "name": "Hoot"
+  }
+},
+{
+  "type": "way",
+  "id": 120111982,
+  "center": {
+    "lat": 33.8068571,
+    "lon": -117.9219205
+  },
+  "tags": {
+    "attraction": "slide",
+    "name": "rockslide"
+  }
+},
+{
+  "type": "way",
+  "id": 120111986,
+  "center": {
+    "lat": 33.8068560,
+    "lon": -117.9219392
+  },
+  "tags": {
+    "attraction": "slide",
+    "name": "Rock Slide"
+  }
+},
+{
+  "type": "way",
+  "id": 120112082,
+  "center": {
+    "lat": 33.8069852,
+    "lon": -117.9216971
+  },
+  "tags": {
+    "air_conditioning": "no",
+    "fixme": "Between 42 and 63in. (107-160cm)",
+    "max_age": "12",
+    "name": "Sequoia Smokejumps Training Tower",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 120112083,
+  "center": {
+    "lat": 33.8069901,
+    "lon": -117.9218287
+  },
+  "tags": {
+    "minimum_height_requirement": "42in. (107cm) and closed toed shoes",
+    "name": "Cliff Hanger Traverse Rock Climb",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 120639750,
+  "center": {
+    "lat": 33.8045387,
+    "lon": -117.9211772
+  },
+  "tags": {
+    "attraction": "carousel",
+    "manufacturer": "D. H. Morgan Manufacturing",
+    "name": "Jessie’s Critter Carousel",
+    "note": "This attraction does not operate during performances of World of Color.",
+    "old_name": "King Triton's Carousel",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/jessies-critter-carousel/",
+    "wikidata": "Q6412118",
+    "wikipedia": "en:Jessie's Critter Carousel"
+  }
+},
+{
+  "type": "way",
+  "id": 121523198,
+  "center": {
+    "lat": 33.8070353,
+    "lon": -117.9209718
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "0",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 122090695,
+  "center": {
+    "lat": 33.8109695,
+    "lon": -117.9175005
+  },
+  "tags": {
+    "addr:housename": "Spaceport 77",
+    "alt_name": "Hyperspace Mountain",
+    "attraction": "roller_coaster",
+    "building:colour": "white",
+    "building:part": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/space-mountain-anaheim-11",
+    "height": "11.5",
+    "lightning_lane": "yes",
+    "manufacturer": "Arrow Dynamics;Dynamic Structures",
+    "minimum_height_requirement": "1.02 m",
+    "name": "Space Mountain",
+    "roof:colour": "white",
+    "roof:shape": "gabled",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/space-mountain/",
+    "wheelchair": "limited",
+    "wheelchair:description": "limited, must transfer to rocket",
+    "wheelchair_entrance": "entrace is through attraction exit (near Spaceport Document Control kiosk)",
+    "wikidata": "Q7572427",
+    "wikipedia": "en:Space Mountain (Disneyland)"
+  }
+},
+{
+  "type": "way",
+  "id": 122744025,
+  "center": {
+    "lat": 33.8127202,
+    "lon": -117.9231990
+  },
+  "tags": {
+    "addr:housename": "The Many Adventures of Winnie the Pooh Show Building",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "name": "The Many Adventures of Winnie the Pooh",
+    "old_name": "Country Bear Jamboree; Country Bear Playhouse",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/many-adventures-of-winnie-the-pooh/",
+    "wikipedia": "en:The Many Adventures of Winnie the Pooh (attraction)"
+  }
+},
+{
+  "type": "way",
+  "id": 122744359,
+  "center": {
+    "lat": 33.8114219,
+    "lon": -117.9172928
+  },
+  "tags": {
+    "amenity": "cinema",
+    "attraction": "movie",
+    "building:part": "yes",
+    "height": "5",
+    "minimum_height_requirement": "none",
+    "name": "Magic Eye Theater",
+    "old_attraction_name": "Disneyland is Your Land;Magic Journeys;Captian EO;Hony I Shrunk the Audience[ Marvel's Guardians of the Galaxy Sneak Peek, Big Hero 6 Perview;Tomorrowland Theatrical Preview;Ant-Man and the Wasp Preview;Pixar Shorts Film Festival;Star Wars: Path of",
+    "old_building_name": "Flying Saucers;Space Stage;Magic Eye Theater",
+    "tourism": "attraction",
+    "wikidata": "Q3030501"
+  }
+},
+{
+  "type": "way",
+  "id": 123138989,
+  "center": {
+    "lat": 33.8051349,
+    "lon": -117.9221877
+  },
+  "tags": {
+    "alt_website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/pixar-pal-a-round-non-swinging/",
+    "attraction": "eccentric_wheel",
+    "contact:yelp": "https://www.yelp.com/biz/mickeys-fun-wheel-anaheim",
+    "height": "49",
+    "layer": "1",
+    "lightning_lane": "no",
+    "manufacturer": "Walt Disney Imagineering",
+    "manufacturer:wikidata": "Q2140930",
+    "name": "Pixar Pal-A-Round",
+    "note": "This attraction does not operate during performances of World of Color.",
+    "old_name": "Sun Wheel;Mickey's Fun Wheel",
+    "roof:shape": "round",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/pixar-pal-a-round-swinging/",
+    "wheelchair": "yes",
+    "wikidata": "Q751240",
+    "wikipedia": "en:Pixar Pal-A-Round"
+  }
+},
+{
+  "type": "way",
+  "id": 129691054,
+  "center": {
+    "lat": 33.8133857,
+    "lon": -117.9189597
+  },
+  "tags": {
+    "addr:housename": "King Arthur Carousel Show Building",
+    "addr:place": "Disneyland",
+    "attraction": "carousel",
+    "building": "yes",
+    "height": "6",
+    "manufacturer": "G.A. Dentzel Company; Arrow Development",
+    "name": "King Arthur Carrousel",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/king-arthur-carrousel/",
+    "wikidata": "Q6411254",
+    "wikipedia": "en:King Arthur Carrousel"
+  }
+},
+{
+  "type": "way",
+  "id": 129708603,
+  "center": {
+    "lat": 33.8103647,
+    "lon": -117.9173188
+  },
+  "tags": {
+    "addr:housename": "Primeval World Diorama Show Building",
+    "addr:housenumber": "9098",
+    "alt_name": "Cast Scheduling",
+    "building": "yes",
+    "height": "10",
+    "name": "Primeval World Diorama",
+    "old_name": "Administration Building",
+    "tourism": "attraction",
+    "wikipedia": "en:Primeval World#The Grand Canyon.2FPrimeval World diorama"
+  }
+},
+{
+  "type": "way",
+  "id": 132551289,
+  "center": {
+    "lat": 33.8102633,
+    "lon": -117.9183374
+  },
+  "tags": {
+    "addr:street": "Main Street",
+    "alt_name": "The Disneyland Story presenting Great Moments with Mr. Lincoln",
+    "amenity": "theatre",
+    "attraction": "animatronic_show",
+    "building": "yes",
+    "height": "9",
+    "manufacturer": "WED Enterprises",
+    "name": "Main Street Opera House",
+    "show": "theater",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/disneyland-story/",
+    "wikidata": "Q2364739",
+    "wikipedia": "en:Great Moments with Mr. Lincoln"
+  }
+},
+{
+  "type": "way",
+  "id": 133337113,
+  "center": {
+    "lat": 33.8153081,
+    "lon": -117.9180217
+  },
+  "tags": {
+    "addr:housename": "Roger Rabbit's Car Toon Spin Show Building",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "lightning_lane": "yes",
+    "manufacturer": "Walt Disney Imagineering",
+    "name": "Roger Rabbit's Car Toon Spin",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/roger-rabbits-car-toon-spin/",
+    "wheelchair": "Persons must transfer into raised vehicle. Building is accessible during firework show conditions.",
+    "wikidata": "Q3439399",
+    "wikipedia": "en:Roger Rabbit's Car Toon Spin"
+  }
+},
+{
+  "type": "way",
+  "id": 144283156,
+  "center": {
+    "lat": 33.8073888,
+    "lon": -117.9183526
+  },
+  "tags": {
+    "addr:housename": "Stage 15",
+    "addr:housenumber": "15",
+    "addr:street": "Hollywood Boulevard",
+    "alt_name": "Disney Junior: Dance Party!;Mickey's Trick & Treat",
+    "alt_website": "https://disneyland.disney.go.com/entertainment/disney-california-adventure/mickeys-trick-and-treat/",
+    "amenity": "theatre",
+    "attraction": "show",
+    "building": "yes",
+    "minimum_height_requirement": "none",
+    "name": "Disney Theater",
+    "old_name": "ABC Soap Opera Bistro;Playhouse Disney: Live on Stage!;Disney Junior: Live on Stage!",
+    "show": "live",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/entertainment/disney-california-adventure/disney-junior-dance-party/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 153044358,
+  "center": {
+    "lat": 33.8099735,
+    "lon": -117.9189555
+  },
+  "tags": {
+    "addr:street": "Main Street",
+    "alt_name": "Disneyland Railroad",
+    "building": "train_station",
+    "designation": "Disneyland Railroad",
+    "height": "7",
+    "layer": "1",
+    "name": "Main Street Train Station",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/disneyland-railroad/",
+    "wheelchair": "no",
+    "wheelchair:description": "Main Street Station is the only station not Wheelchair acessible. If you will to board the train try New Orleans Station or Tomowrowland  Station. Wheelchair people must stay on board the train at the station."
+  }
+},
+{
+  "type": "way",
+  "id": 154551361,
+  "center": {
+    "lat": 33.8071687,
+    "lon": -117.9218733
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no",
+    "layer": "0",
+    "leisure": "water_slide",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 154551365,
+  "center": {
+    "lat": 33.8071502,
+    "lon": -117.9219092
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no",
+    "layer": "1",
+    "leisure": "water_slide",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 168833464,
+  "center": {
+    "lat": 33.8126499,
+    "lon": -117.9165263
+  },
+  "tags": {
+    "addr:housename": "Autopia Show Building",
+    "attraction": "amusement_ride",
+    "building": "yes",
+    "height": "8",
+    "layer": "2",
+    "lightning_lane": "yes",
+    "manufacturer": "Arrow Development",
+    "minimum_height_requirement": "32in (81cm)",
+    "name": "Autopia",
+    "old_name": "Tomorrowland Autopia",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/autopia/",
+    "wikidata": "Q2193497",
+    "wikipedia": "en:Autopia"
+  }
+},
+{
+  "type": "way",
+  "id": 169215396,
+  "center": {
+    "lat": 33.8116930,
+    "lon": -117.9177060
+  },
+  "tags": {
+    "alt_name": "Star Tours",
+    "attraction": "motion_simulator",
+    "building": "yes",
+    "height": "10",
+    "lightning_lane": "yes",
+    "manufacturer": "Rediffusion Simulation;Thales Training & Simulation",
+    "minimum_height_requirement": "1.02 m",
+    "name": "Star Tours: The Adventures Continue",
+    "old_name": "Monsanto Hall of Chemistry;Bathroom of Tomorrow;Fashions and Fabrics Through the Ages;Star Tours;Adventure Thru Inner Space",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/star-tours/",
+    "wheelchair": "limited",
+    "wheelchair:description": "Wheelchair guests must transfer from chair to spacecraft's seat",
+    "wikidata": "Q3496988",
+    "wikipedia": "en:Star Tours – The Adventures Continue"
+  }
+},
+{
+  "type": "way",
+  "id": 178238267,
+  "center": {
+    "lat": 33.8121183,
+    "lon": -117.9227742
+  },
+  "tags": {
+    "attraction": "loading_platform",
+    "log_flume": "platform",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 178238513,
+  "center": {
+    "lat": 33.8121210,
+    "lon": -117.9227867
+  },
+  "tags": {
+    "attraction": "loading_platform",
+    "log_flume": "platform",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 178254960,
+  "center": {
+    "lat": 33.8114903,
+    "lon": -117.9225599
+  },
+  "tags": {
+    "addr:city": "Anaheim",
+    "addr:housename": "Haunted Mansion Show Building",
+    "addr:housenumber": "26",
+    "addr:postcode": "92802",
+    "addr:state": "CA",
+    "addr:street": "Esplanade Road",
+    "alt_name": "Haunted Mansion Holiday",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "contact:yelp": "http://www.yelp.com/biz/the-haunted-mansion-anaheim",
+    "height": "6",
+    "lightning_lane": "yes",
+    "manufacturer": "Arrow Development",
+    "manufacturer:wikidata": "Q16240762",
+    "name": "The Haunted Mansion",
+    "start_date": "August 9, 1969",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/haunted-mansion-holiday/",
+    "wheelchair": "yes",
+    "wikidata": "Q2030983",
+    "wikipedia": "en:The Haunted Mansion"
+  }
+},
+{
+  "type": "way",
+  "id": 179177226,
+  "center": {
+    "lat": 33.8138272,
+    "lon": -117.9194525
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "Storybook Land Canal Boats",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 184541144,
+  "center": {
+    "lat": 33.8073568,
+    "lon": -117.9175923
+  },
+  "tags": {
+    "addr:housenumber": "36",
+    "addr:street": "Hollywood Boulevard",
+    "air_conditioning": "yes",
+    "alt_name": "Stage 36, Turtle Talk With Crush, Animation Acadamy",
+    "building": "yes",
+    "contact:yelp": "http://www.yelp.com/biz/animation-academy-anaheim",
+    "height": "9",
+    "image": "https://commons.wikimedia.org/wiki/File:Dca_animation_building.jpg",
+    "minimum_height_requirement": "none",
+    "name": "Disney Animation",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 186539115,
+  "center": {
+    "lat": 33.8155436,
+    "lon": -117.9193648
+  },
+  "tags": {
+    "addr:housename": "Mickey's House Show Building",
+    "addr:housenumber": "1",
+    "addr:street": "Neighborhood Lane",
+    "attraction": "meet_and_greet",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/mickeys-house-and-meet-mickey-anaheim-2",
+    "name": "Mickey's House",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/mickeys-house/",
+    "wheelchair": "yes",
+    "wheelchair:description": "Entrance on right side of house by ramp. Remaining of attraction is accessible",
+    "wikidata": "Q6838553",
+    "wikipedia": "en:Mickey's House and Meet Mickey"
+  }
+},
+{
+  "type": "way",
+  "id": 188171538,
+  "center": {
+    "lat": 33.8084898,
+    "lon": -117.9171779
+  },
+  "tags": {
+    "addr:country": "US",
+    "addr:housename": "Monsters, Inc. Mike & Sulley to the Rescue! Show Building",
+    "addr:housenumber": "16",
+    "alt_name": "Stage 16",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/monsters-inc-mike-and-sulley-to-the-rescue-anaheim-9",
+    "height": "7",
+    "image": "https://commons.wikimedia.org/wiki/File:Mike_and_Sulley_to_the_Rescue.JPG",
+    "lightning_lane": "yes",
+    "manufacturer": "Ride & Show Engineering, Inc.",
+    "name": "Monsters, Inc. Mike & Sulley to the Rescue!",
+    "old_name": "Superstar Limo",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/monsters-inc/",
+    "wikidata": "Q3321565",
+    "wikipedia": "en:Monsters, Inc. Mike & Sulley to the Rescue!"
+  }
+},
+{
+  "type": "way",
+  "id": 194261873,
+  "center": {
+    "lat": 33.8114047,
+    "lon": -117.9200460
+  },
+  "tags": {
+    "addr:city": "Anaheim",
+    "addr:housename": "Adventureland Landing",
+    "addr:state": "CA",
+    "alt_name": "Jingle Cruise",
+    "amenity": "ferry_terminal",
+    "attraction": "boat_ride",
+    "building": "yes",
+    "ferry": "yes",
+    "layer": "2",
+    "manufacturer": "WED Enterprises",
+    "manufacturer:wikidata": "Q2140930",
+    "name": "Jungle Cruise",
+    "public_transport": "station",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/jungle-cruise/",
+    "wikidata": "Q2777874",
+    "wikipedia": "en:Jungle Cruise"
+  }
+},
+{
+  "type": "way",
+  "id": 194882116,
+  "center": {
+    "lat": 33.8045630,
+    "lon": -117.9204998
+  },
+  "tags": {
+    "addr:housename": "Incredicoaster Loading Platform",
+    "attraction": "roller_coaster",
+    "building": "roof",
+    "lightning_lane": "yes",
+    "manufacturer": "Intamin Amusement Rides",
+    "minimum_height_requirement": "48in (122cm)",
+    "name": "Incredicoaster",
+    "note": "This attraction does not operate during performances of World of Color.",
+    "old_name": "California Screamin'",
+    "roller_coaster": "station",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/incredicoaster/",
+    "wikidata": "Q1026847",
+    "wikipedia": "en:Incredicoaster"
+  }
+},
+{
+  "type": "way",
+  "id": 202732666,
+  "center": {
+    "lat": 33.8126426,
+    "lon": -117.9195682
+  },
+  "tags": {
+    "addr:city": "Anaheim",
+    "addr:housename": "Princesses Meet and Greet",
+    "addr:state": "CA",
+    "building": "yes",
+    "height": "7",
+    "name": "Royal Hall",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/entertainment/disneyland/fantasy-faire/"
+  }
+},
+{
+  "type": "way",
+  "id": 203286173,
+  "center": {
+    "lat": 33.8076533,
+    "lon": -117.9203275
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "1",
+    "name": "Frog Jump Falls",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 203286174,
+  "center": {
+    "lat": 33.8072946,
+    "lon": -117.9197660
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "2",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 203325173,
+  "center": {
+    "lat": 33.8123077,
+    "lon": -117.9197932
+  },
+  "tags": {
+    "addr:city": "Anaheim",
+    "addr:state": "CA",
+    "building": "yes",
+    "height": "4",
+    "leisure": "amusement_arcade",
+    "name": "Shooting Exposition",
+    "old_name": "Frontierland Shooting Gallery;Frontierland Shootin’ Arcade",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/frontierland-shootin-exposition/",
+    "wikidata": "Q3453570",
+    "wikipedia": "en:Frontierland Shootin' Arcade"
+  }
+},
+{
+  "type": "way",
+  "id": 229747056,
+  "center": {
+    "lat": 33.8060209,
+    "lon": -117.9198995
+  },
+  "tags": {
+    "air_conditioning": "yes",
+    "building:part": "yes",
+    "minimum_height_requirement": "none",
+    "name": "Boudin Bakery Tour",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/bakery-tour/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 263318005,
+  "center": {
+    "lat": 33.8145150,
+    "lon": -117.9177495
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "\"It's a Small World\"",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 266074156,
+  "center": {
+    "lat": 33.8126695,
+    "lon": -117.9203586
+  },
+  "tags": {
+    "alt_name": "Big Thunder Mountain;Frontierland Station;Rainbow Ridge",
+    "attraction": "roller_coaster",
+    "building": "yes",
+    "contact:yelp": "http://www.yelp.com/biz/big-thunder-mountain-railroad-anaheim-2",
+    "height": "3",
+    "lightning_lane": "yes",
+    "manufacturer": "Dynamic Structures",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Big Thunder Mountain Railroad",
+    "old_name": "Conestoge Wagons;Mule Pack;Rainbow Ridge Mule Pack;Pack Mules Through Nature's Wonderlnad;Western Mine Train Through Nature's Wonderland, Stage Coach;Discovery Bay;Painted Desert",
+    "short_name": "BTMRR",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/big-thunder-mountain-railroad/",
+    "wikidata": "Q859406",
+    "wikipedia": "en:Big Thunder Mountain Railroad"
+  }
+},
+{
+  "type": "way",
+  "id": 278473145,
+  "center": {
+    "lat": 33.8073400,
+    "lon": -117.9202367
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "2",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278473150,
+  "center": {
+    "lat": 33.8074138,
+    "lon": -117.9198575
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "3",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278473153,
+  "center": {
+    "lat": 33.8071893,
+    "lon": -117.9199338
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "3",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "tunnel": "yes",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278473157,
+  "center": {
+    "lat": 33.8070538,
+    "lon": -117.9199713
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "2",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "tunnel": "yes",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278776872,
+  "center": {
+    "lat": 33.8071088,
+    "lon": -117.9198113
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "2",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278776873,
+  "center": {
+    "lat": 33.8075966,
+    "lon": -117.9206006
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "0",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278776874,
+  "center": {
+    "lat": 33.8072338,
+    "lon": -117.9197803
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "layer": "2",
+    "name": "Bear Claw Fall",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "tunnel": "yes",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 278776875,
+  "center": {
+    "lat": 33.8070497,
+    "lon": -117.9199665
+  },
+  "tags": {
+    "attraction": "river_rafting",
+    "boat": "private",
+    "bridge": "viaduct",
+    "layer": "3",
+    "name": "Grizzly River Run",
+    "oneway": "yes",
+    "tourism": "attraction",
+    "tunnel": "yes",
+    "width": "10''"
+  }
+},
+{
+  "type": "way",
+  "id": 312369808,
+  "center": {
+    "lat": 33.8084223,
+    "lon": -117.9200191
+  },
+  "tags": {
+    "addr:housename": "Soarin' Show Building",
+    "air_conditioning": "yes",
+    "alt_name": "Soarin' Over California",
+    "attraction": "motion_simulator",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/soarin-over-california-anaheim-2",
+    "image": "https://commons.wikimedia.org/wiki/File:Soarin_Over_California_Updated_Entrance_-_July_17th_2015.JPG",
+    "lightning_lane": "yes",
+    "manufacturer": "Dynamic Structures",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Soarin' Around the World",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/soarin/",
+    "wikidata": "Q2775778",
+    "wikipedia": "en:Soarin'"
+  }
+},
+{
+  "type": "way",
+  "id": 313039853,
+  "center": {
+    "lat": 33.8066246,
+    "lon": -117.9169048
+  },
+  "tags": {
+    "addr:street": "Sunset Blvd",
+    "alt_name": "Guardians of the Galaxy: Monsters After Dark",
+    "alt_website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/guardians-galaxy-mission-breakout-after-dark/",
+    "attraction": "drop_tower",
+    "building": "yes",
+    "layer": "1",
+    "lightning_lane": "yes",
+    "manufacturer": "Otis Elevator Company",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Guardians of the Galaxy: Mission Breakout",
+    "old_name": "Twilight Zone: Tower of Terror",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/guardians-galaxy-mission-breakout/",
+    "wikidata": "Q26036866",
+    "wikipedia": "en:Guardians of the Galaxy – Mission: Breakout!"
+  }
+},
+{
+  "type": "way",
+  "id": 331440228,
+  "center": {
+    "lat": 33.8128059,
+    "lon": -117.9189564
+  },
+  "tags": {
+    "building": "castle",
+    "height": "7",
+    "height_ft": "77",
+    "name": "Sleeping Beauty Castle",
+    "name:fr": "Château de la Belle au bois dormant",
+    "not:historic": "castle",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/sleeping-beauty-castle-walkthrough/"
+  }
+},
+{
+  "type": "way",
+  "id": 336617708,
+  "center": {
+    "lat": 33.8064667,
+    "lon": -117.9191366
+  },
+  "tags": {
+    "attraction": "whip_ride",
+    "barrier": "fence",
+    "minimum_height_requirement": "32in. (81cm)",
+    "name": "Mater's Junkyard Jamboree",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/maters-junkyard-jamboree/"
+  }
+},
+{
+  "type": "way",
+  "id": 337426362,
+  "center": {
+    "lat": 33.8063367,
+    "lon": -117.9214689
+  },
+  "tags": {
+    "addr:housename": "The Little Mermaid: Ariel's Undersea Adventure Show Building",
+    "air_conditioning": "yes",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "height": "10.5",
+    "manufacturer": "Sansei Technologies, Inc.",
+    "name": "Little Mermaid: Ariel's Undersea Adventure",
+    "old_name": "Golden Dreams Theater",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/little-mermaid-ariels-undersea-adventure/",
+    "wheelchair": "limited",
+    "wikidata": "Q3521602"
+  }
+},
+{
+  "type": "way",
+  "id": 337552126,
+  "center": {
+    "lat": 33.8063984,
+    "lon": -117.9190471
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 337552127,
+  "center": {
+    "lat": 33.8064458,
+    "lon": -117.9189798
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 337552128,
+  "center": {
+    "lat": 33.8065202,
+    "lon": -117.9189750
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 337552129,
+  "center": {
+    "lat": 33.8063937,
+    "lon": -117.9191379
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 342771469,
+  "center": {
+    "lat": 33.8059615,
+    "lon": -117.9222682
+  },
+  "tags": {
+    "attraction": "spinner",
+    "building:part": "yes",
+    "height": "4",
+    "image": "https://commons.wikimedia.org/wiki/File:Golden_Zephyr_from_Jellyfish.jpg",
+    "manufacturer": "D. H. Morgan Manufacturing",
+    "name": "Golden Zephyr",
+    "note": "This attraction does not operate during performances of World of Color. Also does not operate in inclement weather. (Wind)",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/golden-zephyr/",
+    "wikidata": "Q3110108",
+    "wikipedia": "en:Golden Zephyr"
+  }
+},
+{
+  "type": "way",
+  "id": 354143455,
+  "center": {
+    "lat": 33.8058294,
+    "lon": -117.9248998
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 354398458,
+  "center": {
+    "lat": 33.8082080,
+    "lon": -117.9269008
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 354398459,
+  "center": {
+    "lat": 33.8082357,
+    "lon": -117.9270906
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 359510918,
+  "center": {
+    "lat": 33.8047548,
+    "lon": -117.9188436
+  },
+  "tags": {
+    "amenity": "fountain",
+    "fountain": "decorative",
+    "name": "Radiator Springs",
+    "natural": "water",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 361504826,
+  "center": {
+    "lat": 33.8119182,
+    "lon": -117.9228394
+  },
+  "tags": {
+    "addr:housename": "Tiana's Bayou Adventure Show Building",
+    "attraction": "log_flume",
+    "building": "yes",
+    "lightning_lane": "yes",
+    "manufacturer": "Hopkins Rides",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Tiana's Bayou Adventure",
+    "old_name": "Splash Mountain",
+    "short_name": "TBA",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/tianas-bayou-adventure/",
+    "wheelchair": "yes",
+    "wikidata": "Q115857838",
+    "wikipedia": "en:Tiana's Bayou Adventure"
+  }
+},
+{
+  "type": "way",
+  "id": 363559932,
+  "center": {
+    "lat": 33.8123925,
+    "lon": -117.9177164
+  },
+  "tags": {
+    "addr:housename": "Buzz Lightyear Astro Blasters Show Bulding",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "height": "10",
+    "layer": "1",
+    "lightning_lane": "yes",
+    "manufacturer": "Sansei Technologies, Inc.",
+    "minimum_height_requirement": "none",
+    "name": "Buzz Lightyear Astro Blasters",
+    "old_name": "Space Station X-1; America the Beautiful; Rocket Rods",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/buzz-lightyear-astro-blasters/",
+    "wheelchair": "limited",
+    "wikidata": "Q2916664",
+    "wikipedia": "en:Buzz Lightyear's Space Ranger Spin"
+  }
+},
+{
+  "type": "way",
+  "id": 364262516,
+  "center": {
+    "lat": 33.8056561,
+    "lon": -117.9226684
+  },
+  "tags": {
+    "attraction": "swing_carousel",
+    "building": "yes",
+    "contact:yelp": "http://www.yelp.com/biz/silly-symphony-swings-anaheim",
+    "height": "5",
+    "layer": "1",
+    "manufacturer": "Zierer Karussell- und Spezialmaschinenbau GmbH & Co. KG",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Silly Symphony Swings",
+    "note": "This attraction does not operate during performances of World of Color.",
+    "old_name": "Orange Stinger",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/silly-symphony-swings/",
+    "wikidata": "Q3483925",
+    "wikipedia": "en:Silly Symphony Swings"
+  }
+},
+{
+  "type": "way",
+  "id": 414353231,
+  "center": {
+    "lat": 33.8069260,
+    "lon": -117.9215378
+  },
+  "tags": {
+    "addr:street": "Grizzly Peak Trail",
+    "alt_name": "Villains Grove",
+    "alt_website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/villains-grove/",
+    "attraction": "walk_through",
+    "leisure": "playground",
+    "manufacturer": "Walt Disney Imagineering",
+    "manufacturer:wikidata": "Q2140930",
+    "name": "Redwood Creek Challenge Trail",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/redwood-creek-challenge-trail/",
+    "wheelchair": "Wheelchair access throughout this attraction is limited. Many physical obstacles may block paths, like staircases, raised bridges, streams, slides, and crawl spaces. Alternative paths are available around most of these obstacles. Please seek out for local"
+  }
+},
+{
+  "type": "way",
+  "id": 499783300,
+  "center": {
+    "lat": 33.8151334,
+    "lon": -117.9175922
+  },
+  "tags": {
+    "addr:housename": "\"it's a small world\" Show Building",
+    "addr:street": "\"it's a small world\" Mall",
+    "alt_name": "\"it's a small world\" Holiday",
+    "attraction": "boat_ride",
+    "building": "yes",
+    "height": "7",
+    "layer": "3",
+    "lightning_lane": "yes",
+    "manufacturer": "Arrow Development;WED Enterprises",
+    "name": "\"it's a small world\"",
+    "old_name": "Fanasyland Depot",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/its-a-small-world/",
+    "wheelchair": "limited",
+    "wikidata": "Q285105",
+    "wikipedia": "en:It's a Small World"
+  }
+},
+{
+  "type": "way",
+  "id": 515673763,
+  "center": {
+    "lat": 33.8152093,
+    "lon": -117.9213781
+  },
+  "tags": {
+    "addr:housename": "Millennium Falcon: Smuggler’s Run Show Building",
+    "attraction": "motion_simulator",
+    "building": "yes",
+    "lightning_lane": "yes",
+    "manufacturer": "Walt Disney Imagineering",
+    "minimum_height_requirement": "38in (97cm)",
+    "name": "Millennium Falcon: Smuggler’s Run",
+    "old_name": "Circle D Ranch",
+    "short_name": "MFSR",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/millennium-falcon-smugglers-run/",
+    "wheelchair": "limited",
+    "wikidata": "Q67130326"
+  }
+},
+{
+  "type": "way",
+  "id": 595640723,
+  "center": {
+    "lat": 33.8108246,
+    "lon": -117.9214472
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "Pirates of the Caribbean",
+    "oneway": "yes",
+    "route": "boat_track"
+  }
+},
+{
+  "type": "way",
+  "id": 595649933,
+  "center": {
+    "lat": 33.8063801,
+    "lon": -117.9213656
+  },
+  "tags": {
+    "attraction": "dark_ride",
+    "covered": "yes",
+    "dark_ride": "track",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 607524502,
+  "center": {
+    "lat": 33.8143946,
+    "lon": -117.9227172
+  },
+  "tags": {
+    "addr:housename": "Star Wars: Rise of the Resistance Show Building",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "lightning_lane": "yes",
+    "manufacturer": "Walt Disney Imagineering",
+    "minimum_height_requirement": "40in (102cm)",
+    "name": "Star Wars: Rise of the Resistance",
+    "old_name": "Tram Maintenance",
+    "short_name": "ROTR",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/star-wars-rise-of-the-resistance/",
+    "wikidata": "Q64512455",
+    "wikipedia": "en:Star Wars: Rise of the Resistance"
+  }
+},
+{
+  "type": "way",
+  "id": 653252855,
+  "center": {
+    "lat": 33.8111352,
+    "lon": -117.9188462
+  },
+  "tags": {
+    "alt_name": "Main Street",
+    "attraction": "theme_area",
+    "name": "Main Street U.S.A.",
+    "operator": "Disney Parks and Resorts",
+    "place": "locality",
+    "short_name": "MS",
+    "website": "https://disneyland.disney.go.com/destinations/disneyland/main-street-usa/",
+    "website:es": "https://disneyland.disney.go.com/es/disneyland/main-street-usa/",
+    "wikidata": "Q49981281",
+    "wikipedia": "en:Main Street, U.S.A."
+  }
+},
+{
+  "type": "way",
+  "id": 653252856,
+  "center": {
+    "lat": 33.8116561,
+    "lon": -117.9195789
+  },
+  "tags": {
+    "addr:housename": "Walt Disney's Enchanted Tiki Room Show Building",
+    "addr:state": "CA",
+    "amenity": "theatre",
+    "attraction": "animatronic_show",
+    "building": "yes",
+    "manufacturer": "WED Enterprises",
+    "name": "Walt Disney's Enchanted Tiki Room",
+    "show": "musical",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/enchanted-tiki-room/",
+    "wikipedia": "en:Walt Disney's Enchanted Tiki Room"
+  }
+},
+{
+  "type": "way",
+  "id": 690246998,
+  "center": {
+    "lat": 33.8052349,
+    "lon": -117.9228779
+  },
+  "tags": {
+    "attraction": "spinner",
+    "manufacturer": "Zamperla",
+    "manufacturer:wikidata": "Q605772",
+    "name": "Inside Out: Emotional Whirlwind",
+    "note": "This attraction does not operate during performances of World of Color.",
+    "old_name": "Maliboomer;Flik's Flyers",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/emotional-whirlwind/",
+    "wikidata": "Q108333776"
+  }
+},
+{
+  "type": "way",
+  "id": 721810397,
+  "center": {
+    "lat": 33.8068962,
+    "lon": -117.9186849
+  },
+  "tags": {
+    "attraction": "dark_ride",
+    "building": "yes",
+    "height": "9",
+    "lightning_lane": "yes",
+    "minimum_height_requirement": "none",
+    "name": "WEB SLINGERS: A Spider-Man Adventure",
+    "old_name": "A Bug's Life Theater",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/web-slingers-spider-man-adventure/",
+    "wikipedia": "en:Web Slingers: A Spider-Man Adventure"
+  }
+},
+{
+  "type": "way",
+  "id": 753161662,
+  "center": {
+    "lat": 33.8042436,
+    "lon": -117.9190651
+  },
+  "tags": {
+    "addr:housename": "Radiator Springs Racers Show Building",
+    "attraction": "slot_car",
+    "building": "yes",
+    "height": "20",
+    "image": "https://commons.wikimedia.org/wiki/File:Radiator_Springs_Racers_at_Cars_Land.jpg",
+    "lightning_lane": "yes",
+    "manufacturer": "Dynamic Attractions",
+    "name": "Radiator Springs Racers",
+    "note": "This attraction does not operate in inclement weather. (Rain)",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/disneys-california-adventure/radiator-springs-racers/",
+    "wheelchair": "limited",
+    "wikidata": "Q3416468",
+    "wikipedia": "en:Radiator Springs Racers"
+  }
+},
+{
+  "type": "way",
+  "id": 755354603,
+  "center": {
+    "lat": 33.8056728,
+    "lon": -117.9181224
+  },
+  "tags": {
+    "air_conditioning": "no",
+    "attraction": "dancing_cars",
+    "minimum_height_requirement": "32 in. (81 cm.)",
+    "name": "Luigi's Rollickin' Roadsters",
+    "note": "This attraction does not operate in inclement weather. (Rain)",
+    "old_name": "Luigi's Flying Tires",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disney-california-adventure/luigis-rollickin-roadsters/"
+  }
+},
+{
+  "type": "way",
+  "id": 761611922,
+  "center": {
+    "lat": 33.8120940,
+    "lon": -117.9182826
+  },
+  "tags": {
+    "attraction": "spinner",
+    "barrier": "fence",
+    "manufacturer": "Klaus Company Bavaria; Walt Disney Imgaineering",
+    "minimum_height_requirement": "none",
+    "name": "Astro Orbitor",
+    "old_name": "World Clock",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/astro-orbitor/",
+    "wikidata": "Q2776790",
+    "wikipedia": "en:Astro Orbiter"
+  }
+},
+{
+  "type": "way",
+  "id": 824031782,
+  "center": {
+    "lat": 33.8102961,
+    "lon": -117.9211696
+  },
+  "tags": {
+    "addr:city": "Anaheim",
+    "addr:country": "US",
+    "addr:housename": "Indiana Jones Adventure Show Building",
+    "addr:state": "CA",
+    "alt_name": "Indiana Jones and The Temple of the Forbidden Eye",
+    "attraction": "dark_ride;slot_car",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/indiana-jones-adventure-anaheim-6",
+    "height": "4",
+    "layer": "1",
+    "lightning_lane": "yes",
+    "manufacturer": "Walt Disney Imagineering",
+    "minimum_height_requirement": "1.17 m",
+    "name": "Indiana Jones Adventure",
+    "old_name": "Eeyore Parking Lot",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/indiana-jones-adventure/",
+    "wikidata": "Q3150108",
+    "wikipedia": "en:Indiana Jones Adventure"
+  }
+},
+{
+  "type": "way",
+  "id": 824031784,
+  "center": {
+    "lat": 33.8107923,
+    "lon": -117.9215201
+  },
+  "tags": {
+    "addr:housename": "Pirates of the Caribbean Show Building",
+    "addr:housenumber": "50",
+    "addr:street": "Esplanade Road",
+    "attraction": "splash_boats",
+    "building": "yes",
+    "contact:yelp": "https://www.yelp.com/biz/pirates-of-the-caribbean-anaheim-3",
+    "height": "10",
+    "lightning_lane": "no",
+    "manufacturer": "Arrow Development",
+    "manufacturer:wikidata": "Q16240762",
+    "name": "Pirates of the Caribbean",
+    "note": "to see more indepth design go to http://www.bendintheriver.net/",
+    "short_name": "POTC",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/pirates-of-the-caribbean/",
+    "wikidata": "Q1713564",
+    "wikipedia": "en:Pirates of the Caribbean (attraction)"
+  }
+},
+{
+  "type": "way",
+  "id": 868763698,
+  "center": {
+    "lat": 33.8159462,
+    "lon": -117.9187333
+  },
+  "tags": {
+    "addr:housename": "Mickey and Minnie's Runaway Railway Show Building",
+    "attraction": "dark_ride",
+    "building": "yes",
+    "lightning_lane": "yes",
+    "name": "Mickey and Minnie's Runaway Railway",
+    "old_name": "Disneyland Rehearsal Hall;N-19 Entertainment Technical Services Building",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/mickey-minnies-runaway-railway/",
+    "wikidata": "Q33082878",
+    "wikipedia": "en:Mickey & Minnie's Runaway Railway"
+  }
+},
+{
+  "type": "way",
+  "id": 941481558,
+  "center": {
+    "lat": 33.8082659,
+    "lon": -117.9271179
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 941481559,
+  "center": {
+    "lat": 33.8081941,
+    "lon": -117.9269160
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 941481560,
+  "center": {
+    "lat": 33.8058164,
+    "lon": -117.9249061
+  },
+  "tags": {
+    "attraction": "water_slide",
+    "fee": "no",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1058667880,
+  "center": {
+    "lat": 33.8112564,
+    "lon": -117.9205419
+  },
+  "tags": {
+    "alt_name": "Disneydendron semperflorens grandis",
+    "attraction": "walk_through",
+    "manufacturer": "WED Enterprises",
+    "manufacturer:wikidata": "Q2140930",
+    "name": "Adventureland Treehouse",
+    "note": "This attraction does not operate during performances of Fantasmic. Also does not operate in inclement weather. (Rain)",
+    "old_name": "Swiss Family Tree House;Tarzan's Treehouse",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/adventureland-treehouse/",
+    "wikidata": "Q124477993",
+    "wikipedia": "en:Adventureland Treehouse"
+  }
+},
+{
+  "type": "way",
+  "id": 1156522368,
+  "center": {
+    "lat": 33.8152183,
+    "lon": -117.9191054
+  },
+  "tags": {
+    "area": "yes",
+    "attraction": "splash_pad",
+    "highway": "footway",
+    "leisure": "playground",
+    "name": "Donald's Duck Pond",
+    "old_name": "Donald's Boat",
+    "playground": "splash_pad",
+    "sport": "swimming",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/donalds-duck-pond/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1156522384,
+  "center": {
+    "lat": 33.8151626,
+    "lon": -117.9188162
+  },
+  "tags": {
+    "attraction": "playground",
+    "leisure": "playground",
+    "name": "Goofy's How-to-Play Yard",
+    "old_name": "Goofy’s Playhouse;Goofy's Bouncehouse",
+    "tourism": "attraction",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/goofys-how-to-play-yard/"
+  }
+},
+{
+  "type": "way",
+  "id": 1180356813,
+  "center": {
+    "lat": 33.8151004,
+    "lon": -117.9187887
+  },
+  "tags": {
+    "attraction": "slide",
+    "lanes": "2",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1180356824,
+  "center": {
+    "lat": 33.8151114,
+    "lon": -117.9188106
+  },
+  "tags": {
+    "attraction": "slide",
+    "lanes": "1",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1208517393,
+  "center": {
+    "lat": 33.8080063,
+    "lon": -117.9277641
+  },
+  "tags": {
+    "area": "yes",
+    "attraction": "splash_pad",
+    "leisure": "playground",
+    "old_name": "Steamboat Willie Splash Pad",
+    "playground": "splash_pad",
+    "sport": "swimming",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1343592409,
+  "center": {
+    "lat": 33.8064507,
+    "lon": -117.9193005
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1343592410,
+  "center": {
+    "lat": 33.8065286,
+    "lon": -117.9192938
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1343592411,
+  "center": {
+    "lat": 33.8065651,
+    "lon": -117.9192318
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1343592412,
+  "center": {
+    "lat": 33.8065616,
+    "lon": -117.9191524
+  },
+  "tags": {
+    "area": "yes",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1344387887,
+  "center": {
+    "lat": 33.8145751,
+    "lon": -117.9176737
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "\"It's a Small World\"",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1344387888,
+  "center": {
+    "lat": 33.8145119,
+    "lon": -117.9178464
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "\"It's a Small World\"",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1344387889,
+  "center": {
+    "lat": 33.8145581,
+    "lon": -117.9179313
+  },
+  "tags": {
+    "attraction": "boat_ride",
+    "name": "\"It's a Small World\"",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 1796774,
+  "center": {
+    "lat": 33.8124170,
+    "lon": -117.9192690
+  },
+  "tags": {
+    "attraction": "train",
+    "fee": "Disneyland park admission required",
+    "manufacturer": "Baldwin Locomotive Works",
+    "name": "Disneyland Railroad",
+    "old_name": "Disneyland/Santa Fe Railroad",
+    "old_operator": "Disney/Santa Fe;Retlaw",
+    "operator": "Walt Disney Parks and Resorts",
+    "ref": "DLRR",
+    "route": "train",
+    "short_name": "DLRR",
+    "type": "route",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/disneyland-railroad/",
+    "wheelchair": "limited",
+    "wheelchair:note": "The Disneyland Railroad cannot accommodate wheelchairs at Main Street Station because of the lack of wheelchair access to and from the station platform. Wheelchair guests can access this attraction by boarding at the other three stations, they have ramps.",
+    "wikidata": "Q3030511",
+    "wikipedia": "en:Disneyland Railroad"
+  }
+},
+{
+  "type": "relation",
+  "id": 7752012,
+  "center": {
+    "lat": 33.8136685,
+    "lon": -117.9189042
+  },
+  "tags": {
+    "attraction": "spinner",
+    "manufacturer": "Arrow Development",
+    "name": "Dumbo the Flying Elephant",
+    "old_name": "Chicken of the Sea;Pirate Ship Pirate Ship and Restaurant",
+    "opening_date": "July 17, 1955",
+    "operator": "Disneyland Resort",
+    "tourism": "attraction",
+    "type": "multipolygon",
+    "website": "https://disneyland.disney.go.com/attractions/disneyland/dumbo-the-flying-elephant/",
+    "wikidata": "Q964565",
+    "wikipedia": "en:Dumbo the Flying Elephant"
+  }
+}
+
+  ]
+}

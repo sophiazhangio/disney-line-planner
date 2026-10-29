@@ -1,0 +1,88 @@
+ride_id,park_id,park,ride,land,lat,lon,osm_name,ride_minutes,single_rider
+12428,16,Disneyland,Adventureland Treehouse inspired by Walt Disney’s Swiss Family Robinson,Adventureland,33.811256,-117.920542,adventureland treehouse,5,0
+326,16,Disneyland,Indiana Jones™ Adventure,Adventureland,33.810296,-117.92117,indiana jones adventure,10,0
+296,16,Disneyland,Jungle Cruise,Adventureland,33.811405,-117.920046,jungle cruise,10,0
+288,16,Disneyland,Walt Disney's Enchanted Tiki Room,Adventureland,33.811656,-117.919579,walt disneys enchanted tiki room,15,0
+304,16,Disneyland,Davy Crockett's Explorer Canoes,Bayou Country,33.812525,-117.922127,davy crocketts explorer canoes,10,0
+306,16,Disneyland,The Many Adventures of Winnie the Pooh,Bayou Country,33.81272,-117.923199,the many adventures of winnie the pooh,4,0
+14168,16,Disneyland,Tiana's Bayou Adventure,Bayou Country,33.811918,-117.922839,tianas bayou adventure,11,0
+14326,16,Disneyland,Tiana's Bayou Adventure Single Rider,Bayou Country,33.811918,-117.922839,tianas bayou adventure,11,1
+307,16,Disneyland,"""it's a small world""",Fantasyland,33.814719,-117.917737,its a small world,14,0
+285,16,Disneyland,Alice in Wonderland,Fantasyland,33.813161,-117.918366,alice in wonderland,4,0
+303,16,Disneyland,Casey Jr. Circus Train,Fantasyland,33.813722,-117.919237,casey jr circus train,4,0
+275,16,Disneyland,Dumbo the Flying Elephant,Fantasyland,33.813668,-117.918904,dumbo the flying elephant,5,0
+277,16,Disneyland,King Arthur Carrousel,Fantasyland,33.813386,-117.91896,king arthur carrousel,5,0
+278,16,Disneyland,Mad Tea Party,Fantasyland,33.813476,-117.918277,mad tea party,5,0
+279,16,Disneyland,Matterhorn Bobsleds,Fantasyland,33.813074,-117.917846,matterhorn bobsleds,4,0
+6711,16,Disneyland,Meet Disney Princesses at Royal Hall,Fantasyland,33.812643,-117.919568,royal hall,5,0
+280,16,Disneyland,Mr. Toad's Wild Ride,Fantasyland,33.813311,-117.91872,mr toads wild ride,2,0
+281,16,Disneyland,Peter Pan's Flight,Fantasyland,33.8131,-117.918832,peter pans flight,3,0
+282,16,Disneyland,Pinocchio's Daring Journey,Fantasyland,33.813352,-117.919186,pinocchios daring journey,3,0
+687,16,Disneyland,Sleeping Beauty Castle Walkthrough,Fantasyland,33.812851,-117.919117,sleeping beauty castle walkthrough,5,0
+283,16,Disneyland,Snow White's Enchanted Wish,Fantasyland,33.813089,-117.919103,snow whites enchanted wish,2,0
+305,16,Disneyland,Storybook Land Canal Boats,Fantasyland,33.813769,-117.918805,storybook land canal boats,10,0
+323,16,Disneyland,Big Thunder Mountain Railroad,Frontierland,33.812669,-117.920359,big thunder mountain railroad,4,0
+679,16,Disneyland,Frontierland Shootin' Exposition,Frontierland,33.812293,-117.919799,shooting exposition,5,0
+456,16,Disneyland,Mark Twain Riverboat,Frontierland,33.812242,-117.920578,frontierland landing,14,0
+331,16,Disneyland,Pirate's Lair on Tom Sawyer Island,Frontierland,33.811679,-117.921545,rafts to tom sawyer island,5,0
+328,16,Disneyland,Sailing Ship Columbia,Frontierland,33.812242,-117.920578,frontierland landing,14,0
+674,16,Disneyland,Disneyland Railroad,Main Street U.S.A,33.812417,-117.919269,disneyland railroad,20,0
+690,16,Disneyland,Great Moments with Mr. Lincoln,Main Street U.S.A,33.810263,-117.918337,main street opera house,15,0
+686,16,Disneyland,Main Street Cinema,Main Street U.S.A,33.81071,-117.918851,main street cinema house,5,0
+691,16,Disneyland,Main Street Vehicles,Main Street U.S.A,33.810202,-117.918957,town square,5,0
+14915,16,Disneyland,Opera House - Walt Disney - A Magical Life,Main Street U.S.A,33.810263,-117.918337,main street opera house,15,0
+695,16,Disneyland,The Disney Gallery,Main Street U.S.A,33.810202,-117.918957,town square,5,0
+14923,16,Disneyland,Walt Disney - A Magical Life,Main Street U.S.A,33.810263,-117.918337,main street opera house,15,0
+324,16,Disneyland,Chip 'n' Dale's GADGETcoaster,Mickey's Toontown,33.815222,-117.919491,chip n dales gadgetcoaster,5,0
+13814,16,Disneyland,Donald's Duck Pond,Mickey's Toontown,33.815218,-117.919105,donalds duck pond,5,0
+11980,16,Disneyland,Goofy's How-to-Play Yard,Mickey's Toontown,33.815163,-117.918816,goofys howtoplay yard,5,0
+11526,16,Disneyland,Mickey & Minnie's Runaway Railway,Mickey's Toontown,33.815946,-117.918733,mickey and minnies runaway railway,6,0
+709,16,Disneyland,Mickey's House and Meet Mickey Mouse,Mickey's Toontown,33.815544,-117.919365,mickeys house,5,0
+684,16,Disneyland,Minnie's House,Mickey's Toontown,33.815569,-117.91902,minnies house,5,0
+332,16,Disneyland,Roger Rabbit's Car Toon Spin,Mickey's Toontown,33.815308,-117.918022,roger rabbits car toon spin,5,0
+325,16,Disneyland,Haunted Mansion Holiday,New Orleans Square,33.81149,-117.92256,the haunted mansion,9,0
+289,16,Disneyland,Pirates of the Caribbean,New Orleans Square,33.810808,-117.921484,pirates of the caribbean,15,0
+6339,16,Disneyland,Millennium Falcon: Smugglers Run,Star Wars: Galaxy's Edge,33.815209,-117.921378,millennium falcon smugglers run,6,0
+10903,16,Disneyland,Millennium Falcon: Smugglers Run Single Rider,Star Wars: Galaxy's Edge,33.815209,-117.921378,millennium falcon smugglers run,6,1
+6340,16,Disneyland,Star Wars: Rise of the Resistance,Star Wars: Galaxy's Edge,33.814395,-117.922717,star wars rise of the resistance,18,0
+287,16,Disneyland,Astro Orbitor,Tomorrowland,33.812094,-117.918283,astro orbitor,5,0
+317,16,Disneyland,Autopia,Tomorrowland,33.81265,-117.916526,autopia,6,0
+273,16,Disneyland,Buzz Lightyear Astro Blasters,Tomorrowland,33.812393,-117.917716,buzz lightyear astro blasters,5,0
+274,16,Disneyland,Disneyland Monorail,Tomorrowland,33.812823,-117.916675,tomorrowland monorail station,10,0
+276,16,Disneyland,Finding Nemo Submarine Voyage,Tomorrowland,33.812831,-117.917176,finding nemo submarine voyage,13,0
+16627,16,Disneyland,Pixar Short Film Spotlight,Tomorrowland,33.811422,-117.917293,magic eye theater,15,0
+284,16,Disneyland,Space Mountain,Tomorrowland,33.810969,-117.917501,space mountain,4,0
+286,16,Disneyland,Star Tours - The Adventures Continue,Tomorrowland,33.811693,-117.917706,star tours the adventures continue,7,0
+329,17,Disney California Adventure,Guardians of the Galaxy - Mission: BREAKOUT!,Avengers Campus,33.806625,-117.916905,guardians of the galaxy mission breakout,3,0
+8843,17,Disney California Adventure,WEB SLINGERS: A Spider-Man Adventure,Avengers Campus,33.806896,-117.918685,web slingers a spiderman adventure,5,0
+10907,17,Disney California Adventure,WEB SLINGERS: A Spider-Man Adventure Single Rider,Avengers Campus,33.806896,-117.918685,web slingers a spiderman adventure,5,1
+2608,17,Disney California Adventure,Luigi's Honkin' Haul-O-Ween,Cars Land,33.804244,-117.919065,(land centre),5,0
+295,17,Disney California Adventure,Radiator Springs Racers,Cars Land,33.804244,-117.919065,radiator springs racers,5,0
+10904,17,Disney California Adventure,Radiator Springs Racers Single Rider,Cars Land,33.804244,-117.919065,radiator springs racers,5,1
+302,17,Disney California Adventure,Grizzly River Run,Grizzly Peak,33.807211,-117.920202,grizzly river run,6,0
+293,17,Disney California Adventure,Redwood Creek Challenge Trail,Grizzly Peak,33.806926,-117.921538,redwood creek challenge trail,20,0
+17129,17,Disney California Adventure,Soarin’ Across America,Grizzly Peak,33.808422,-117.920019,soarin around the world,9,0
+5146,17,Disney California Adventure,Guardians of the Galaxy - Monsters After Dark,Halloween,33.806625,-117.916905,guardians of the galaxy mission breakout,3,0
+4723,17,Disney California Adventure,Mater's Graveyard JamBOOree,Halloween,33.806467,-117.919137,maters junkyard jamboree,5,0
+7292,17,Disney California Adventure,Villains Grove at Oogie Boogie Bash,Halloween,33.806546,-117.918021,(land centre),5,0
+321,17,Disney California Adventure,Animation Academy,Hollywood Land,33.807431,-117.917297,animation academy,5,0
+6440,17,Disney California Adventure,Mickey's PhilharMagic,Hollywood Land,33.807627,-117.917418,(land centre),12,0
+291,17,Disney California Adventure,"Monsters, Inc. Mike & Sulley to the Rescue!",Hollywood Land,33.80849,-117.917178,monsters inc mike sulley to the rescue,4,0
+868,17,Disney California Adventure,Sorcerer's Workshop,Hollywood Land,33.807229,-117.917606,sorcerers workshop,5,0
+294,17,Disney California Adventure,Turtle Talk with Crush,Hollywood Land,33.807357,-117.917592,disney animation,15,0
+869,17,Disney California Adventure,The Bakery Tour,Pacific Wharf,33.806058,-117.919763,the bakery tour,10,0
+298,17,Disney California Adventure,Golden Zephyr,Paradise Gardens Park,33.805962,-117.922268,golden zephyr,5,0
+319,17,Disney California Adventure,Goofy's Sky School,Paradise Gardens Park,33.806435,-117.922868,goofys sky school,2,0
+301,17,Disney California Adventure,Silly Symphony Swings,Paradise Gardens Park,33.805656,-117.922668,silly symphony swings,5,0
+10905,17,Disney California Adventure,Silly Symphony Swings Single Rider,Paradise Gardens Park,33.805656,-117.922668,silly symphony swings,5,1
+316,17,Disney California Adventure,The Little Mermaid - Ariel's Undersea Adventure,Paradise Gardens Park,33.806337,-117.921469,little mermaid ariels undersea adventure,7,0
+11528,17,Disney California Adventure,World of Color – ONE,Paradise Gardens Park,33.805366,-117.921842,world of color one,25,0
+866,17,Disney California Adventure,Games of Pixar Pier,Pixar Pier,33.804767,-117.92235,games of pixar pier,5,0
+322,17,Disney California Adventure,Incredicoaster,Pixar Pier,33.804563,-117.9205,incredicoaster,3,0
+10906,17,Disney California Adventure,Incredicoaster Single Rider,Pixar Pier,33.804563,-117.9205,incredicoaster,3,1
+6643,17,Disney California Adventure,Inside Out Emotional Whirlwind,Pixar Pier,33.805235,-117.922878,inside out emotional whirlwind,5,0
+310,17,Disney California Adventure,Jessie's Critter Carousel,Pixar Pier,33.804539,-117.921177,jessies critter carousel,5,0
+300,17,Disney California Adventure,Jumpin' Jellyfish,Pixar Pier,33.805997,-117.922689,jumpin jellyfish,5,0
+311,17,Disney California Adventure,Pixar Pal-A-Round - Swinging,Pixar Pier,33.805135,-117.922188,pixar palaround,5,0
+5557,17,Disney California Adventure,Pixar Pal-A-Round – Non-Swinging,Pixar Pier,33.805135,-117.922188,pixar palaround,5,0
+313,17,Disney California Adventure,Toy Story Midway Mania!,Pixar Pier,33.804484,-117.921779,toy story midway mania,7,0
