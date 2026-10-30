@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Line Planner">
 <title>Disneyland Line Planner</title>
 <style>
   :root {
@@ -64,6 +66,11 @@
   th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); font-size: 14px; }
   th { color: var(--muted); font-weight: 500; font-size: 12px; }
   td.n { color: var(--muted); }
+  td .sub { display: block; color: var(--muted); font-size: 12px; }
+  @media (max-width: 560px) {
+    th, td { padding: 7px 4px; font-size: 13px; }
+    .panel { padding: 12px; }
+  }
   .err { color: var(--wait); }
   footer { color: var(--muted); font-size: 13px; padding-top: 24px; padding-bottom: 32px; }
   footer a { color: var(--accent); }
@@ -183,12 +190,12 @@ function renderPlan(data) {
     <div class="stat"><b>${p.expanded}</b><span>states searched</span></div></div>
     <p class="note">Waits: ${esc(data.waits)}. ${saved > 0 ? `<span class="good">${saved} min sooner</span> than always walking to the nearest ride.` : "Same as walking to the nearest ride each time."}</p>`;
   html += mapSvg(p.steps, data.start_point);
-  html += `<table><thead><tr><th>#</th><th>Ride</th><th>Walk</th><th>Get in line</th><th>Wait</th><th>Off ride</th><th></th></tr></thead><tbody>`;
+  html += `<table><thead><tr><th>#</th><th>Ride</th><th>In line</th><th>Wait</th><th>Off</th><th></th></tr></thead><tbody>`;
   p.steps.forEach((s, i) => {
     const rest = s.join_line - s.arrive > 0.5 ? ` <span class="count">(rest ${Math.round(s.join_line - s.arrive)} min)</span>` : "";
-    html += `<tr><td class="n">${i + 1}</td><td>${esc(s.ride)}</td><td>${Math.round(s.walk_minutes)} min</td>
+    html += `<tr><td class="n">${i + 1}</td><td>${esc(s.ride)}<span class="sub">walk ${Math.round(s.walk_minutes)} min</span></td>
              <td>${clock(s.join_line)}${rest}</td><td>${Math.round(s.wait_minutes)} min</td><td>${clock(s.ride_end)}</td>
-             <td>${i < p.steps.length - 1 ? `<button class="done" data-i="${i}" title="Mark this and the rides before it as done, then re-plan from here with fresh waits">Done, re-plan</button>` : ""}</td></tr>`;
+             <td>${i < p.steps.length - 1 ? `<button class="done" data-i="${i}" title="Mark this and the rides before it as done, then re-plan from here with fresh waits">Done ✓</button>` : ""}</td></tr>`;
   });
   $("out").innerHTML = html + "</tbody></table>";
   LAST = p.steps;
@@ -222,6 +229,7 @@ $("go").addEventListener("click", async () => {
     const data = await res.json();
     if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Request failed");
     renderPlan(data);
+    if (window.matchMedia("(max-width: 860px)").matches) $("out").scrollIntoView({behavior: "smooth"});
   } catch (e) {
     $("out").innerHTML = `<p class="empty err">${esc(e.message)}</p>`;
   } finally { updateCount(); }
