@@ -40,3 +40,14 @@ def test_predicted_profile_feeds_planner():
     assert prof.wait(6340, 14 * 60) > prof.wait(6340, 9 * 60)
     plan = plan_astar([284, 279, 6340], 9 * 60, prof)
     assert len(plan.steps) == 3
+
+
+def test_readme_render_from_metrics():
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from update_readme import render
+
+    _, m = train_and_evaluate(synthetic_history())
+    text = render(m)
+    assert "same time last week" in text and "min" in text

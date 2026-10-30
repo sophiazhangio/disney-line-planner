@@ -60,7 +60,11 @@ The planner uses the model's predictions in 15-minute slots for a future visit d
 
 A\* expanded 183 states on average vs 1,017 for uniform-cost search (5.6× fewer) and found the same optimal times. With waits held constant, only walking order matters, so "nearest ride next" is already close to optimal; chasing the shortest line costs about an hour of extra walking. The gap should grow with predicted waits, where timing (e.g. riding a headliner before the afternoon peak) matters.
 
-**Model** — data collection started Oct 29, 2026. The model needs two or more weeks of history before the "same time last week" baseline can be measured. Results go in [`results/metrics.json`](results/) and here once they exist.
+**Model** — retrained every Monday by a [GitHub Action](.github/workflows/retrain.yml), which rewrites this section from [`results/metrics.json`](results/).
+
+<!-- model-results:start -->
+Data collection started Oct 29, 2026. The first results appear after two weeks of data, when the "same time last week" baseline can be measured.
+<!-- model-results:end -->
 
 ## Run it
 

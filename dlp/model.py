@@ -161,14 +161,23 @@ def predicted_profile(day: date, ride_ids: list[int], close_minute: float = DAY,
     return WaitProfile(slots, SLOT, close_minute, source=f"predicted for {day.isoformat()}")
 
 
-def main() -> None:
+MIN_DAYS = 14  # one week to train on + one held-out week with a "last week" to compare to
+
+
+def main() -> int:
     df = load_history()
+    days = df["date"].nunique()
+    if days < MIN_DAYS:
+        print(f"days of data: {days}; need {MIN_DAYS} to train and evaluate. Skipping.")
+        return 0
     model, metrics = train_and_evaluate(df)
+    metrics["days_of_data"] = int(days)
     save(model, df)
     METRICS_PATH.parent.mkdir(parents=True, exist_ok=True)
     METRICS_PATH.write_text(json.dumps(metrics, indent=2) + "\n")
     print(json.dumps(metrics, indent=2))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
