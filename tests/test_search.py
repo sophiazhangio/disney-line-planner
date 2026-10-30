@@ -72,3 +72,13 @@ def test_cross_park_walk_is_longer():
     dca = [r.id for r in rides.values() if r.park_id == 17]
     assert walk_minutes(dl[0], dca[0]) > 5
     assert walk_minutes(dl[0], dl[1]) == pytest.approx(walk_minutes(dl[1], dl[0]))
+
+
+def test_plan_can_start_at_a_ride():
+    rng = random.Random(7)
+    here, *picks = rng.sample(RIDE_IDS, 5)
+    profile = random_profile(rng, picks)
+    p = plan_astar(picks + [here], 600, profile, start_node=here)
+    assert sorted(p.order) == sorted(picks)          # the ride you're at is not repeated
+    assert p.steps[0].walk_from == here
+    assert p.finish == pytest.approx(plan_brute_force(picks, 600, profile, start_node=here).finish)

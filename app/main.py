@@ -5,8 +5,9 @@
 from __future__ import annotations
 
 import math
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
@@ -14,7 +15,9 @@ from pydantic import BaseModel, Field
 
 from dlp.park import ESPLANADE, START, load_rides
 from dlp.search import Infeasible, Plan, plan_astar, plan_greedy
-from dlp.waits import fetch_live_waits, live_profile
+from dlp.waits import blend_profile, fetch_live_waits, live_profile
+
+PARK_TZ = ZoneInfo("America/Los_Angeles")
 
 STATIC = Path(__file__).parent / "static"
 MAX_RIDES = 12
@@ -26,8 +29,9 @@ class PlanRequest(BaseModel):
     ride_ids: list[int] = Field(min_length=1, max_length=MAX_RIDES)
     start: str = "09:00"
     close: str = "23:59"
-    mode: str = "live"          # "live" or "predicted"
-    date: str | None = None     # visit date for predicted mode (YYYY-MM-DD)
+    mode: str = "blend"         # "live", "predicted", or "blend" (live now, predicted later)
+    date: str | None = None     # visit date (YYYY-MM-DD); defaults to today at the park
+    from_ride_id: int | None = None  # where you are now; None = park entrance
 
 
 def _minutes(hhmm: str) -> float:
@@ -72,37 +76,66 @@ def rides() -> dict:
                     "lat": r.lat, "lon": r.lon, "single_rider": r.single_rider,
                     "is_open": lv.get("is_open"), "wait": lv.get("wait"), "updated": lv.get("updated")})
     out.sort(key=lambda x: (x["park_id"], x["land"], x["name"]))
-    return {"rides": out, "start": {"lat": ESPLANADE[0], "lon": ESPLANADE[1]}, "max_rides": MAX_RIDES}
+    return {"rides": out, "start": {"lat": ESPLANADE[0], "lon": ESPLANADE[1]}, "max_rides": MAX_RIDES,
+            "model_ready": _model_ready(), "park_now": _park_now().strftime("%Y-%m-%d %H:%M")}
+
+
+def _park_now() -> datetime:
+    return datetime.now(PARK_TZ)
+
+
+def _model_ready() -> bool:
+    from dlp.model import MODEL_PATH
+    return MODEL_PATH.exists()
+
+
+def _profile(req: PlanRequest, close: float):
+    """Pick the wait source. Falls back to live waits when there is no model yet."""
+    now = _park_now()
+    day = date.fromisoformat(req.date) if req.date else now.date()
+    is_today = day == now.date()
+    if req.mode == "live" or not _model_ready():
+        if req.mode != "live" and not is_today:
+            raise HTTPException(409, "Predictions for other days need the model, which is not trained yet.")
+        prof = live_profile(close)
+        if req.mode != "live":
+            prof.source = "live (prediction model not trained yet)"
+        return prof
+    from dlp.model import predicted_profile
+    pred = predicted_profile(day, req.ride_ids + ([req.from_ride_id] if req.from_ride_id else []), close)
+    if req.mode == "blend" and is_today:
+        return blend_profile(pred, fetch_live_waits(), now.hour * 60 + now.minute)
+    return pred
 
 
 @app.post("/api/plan")
 def plan(req: PlanRequest) -> dict:
     known = load_rides()
-    bad = [r for r in req.ride_ids if r not in known]
+    bad = [r for r in req.ride_ids + ([req.from_ride_id] if req.from_ride_id else []) if r not in known]
     if bad:
         raise HTTPException(422, f"unknown ride ids {bad}")
+    if req.mode not in ("live", "predicted", "blend"):
+        raise HTTPException(422, "mode must be live, predicted or blend")
     start, close = _minutes(req.start), _minutes(req.close)
-    if req.mode == "predicted":
-        from dlp.model import predicted_profile
-        try:
-            day = date.fromisoformat(req.date) if req.date else date.today()
-            profile = predicted_profile(day, req.ride_ids, close)
-        except FileNotFoundError:
-            raise HTTPException(409, "The prediction model is not trained yet. Use live waits for now.")
-    else:
-        profile = live_profile(close)
+    here = req.from_ride_id or START
+    todo = [r for r in req.ride_ids if r != here]
+    if not todo:
+        raise HTTPException(422, "Nothing left to plan.")
+    profile = _profile(req, close)
 
-    closed = [known[r].name for r in req.ride_ids if math.isinf(profile.min_wait_from(r, start))]
+    closed = [known[r].name for r in todo if math.isinf(profile.min_wait_from(r, start))]
     if closed:
         raise HTTPException(409, "Closed for the rest of the day: " + ", ".join(closed))
     try:
-        best = plan_astar(req.ride_ids, start, profile)
+        best = plan_astar(todo, start, profile, start_node=here)
     except Infeasible as exc:
         raise HTTPException(409, f"Can't fit all of these before closing: {exc}")
     baseline = None
     try:
-        baseline = _plan_json(plan_greedy(req.ride_ids, start, profile, "nearest"))
+        baseline = _plan_json(plan_greedy(todo, start, profile, "nearest", start_node=here))
     except Infeasible:
         pass
+    lat, lon = (known[here].lat, known[here].lon) if here != START else ESPLANADE
+    name = known[here].name if here != START else "Park entrance"
     return {"waits": profile.source, "plan": _plan_json(best), "baseline_nearest": baseline,
-            "start_point": {"id": START, "lat": ESPLANADE[0], "lon": ESPLANADE[1]}}
+            "start_point": {"id": here, "name": name, "lat": lat, "lon": lon}}

@@ -26,6 +26,12 @@
   @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
   .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
   .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  label.f.wide { grid-column: 1 / -1; }
+  .hint { color: var(--muted); font-size: 12px; margin: -4px 0 10px; }
+  .hint:empty { display: none; }
+  button.done { font-size: 12px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 6px;
+                background: transparent; cursor: pointer; white-space: nowrap; }
+  button.done:hover { border-color: var(--accent); color: var(--accent); }
   label.f { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
   input, select, button { font: inherit; color: var(--ink); }
   input[type=time], input[type=date], select, input[type=search] {
@@ -74,10 +80,16 @@
       <label class="f">Start time <input type="time" id="start" value="09:00"></label>
       <label class="f">Park closes <input type="time" id="close" value="23:59"></label>
       <label class="f">Wait times
-        <select id="mode"><option value="live">Live right now</option><option value="predicted">Predicted</option></select>
+        <select id="mode">
+          <option value="blend">Live now, predicted later</option>
+          <option value="live">Live only</option>
+          <option value="predicted">Predicted only</option>
+        </select>
       </label>
       <label class="f">Visit date <input type="date" id="date"></label>
+      <label class="f wide">I'm at <select id="from"><option value="">Park entrance</option></select></label>
     </div>
+    <p class="hint" id="hint"></p>
     <input type="search" id="q" placeholder="Filter rides">
     <div class="list" id="list"><p class="empty">Loading rides…</p></div>
     <div class="bar">
@@ -96,10 +108,13 @@
 <script>
 const $ = (id) => document.getElementById(id);
 const PARKS = {16: "Disneyland", 17: "California Adventure"};
-let RIDES = [], START = null, MAX = 12;
+let RIDES = [], START = null, MAX = 12, LAST = [];
+const PARK_TZ = "America/Los_Angeles";
+const parkNow = () => new Date().toLocaleTimeString("en-GB", {timeZone: PARK_TZ, hour: "2-digit", minute: "2-digit", hour12: false});
+const parkToday = () => new Date().toLocaleDateString("en-CA", {timeZone: PARK_TZ});
 const picked = new Set();
 
-$("date").value = new Date().toLocaleDateString("en-CA");
+$("date").value = parkToday();
 const clock = (m) => { m = Math.round(m); return `${String(Math.floor(m / 60) % 24).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`; };
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 
@@ -134,7 +149,7 @@ $("list").addEventListener("change", (e) => {
 });
 $("q").addEventListener("input", renderList);
 
-function mapSvg(steps) {
+function mapSvg(steps, from) {
   const pts = RIDES.map((r) => [r.lat, r.lon]).concat([[START.lat, START.lon]]);
   const lats = pts.map((p) => p[0]), lons = pts.map((p) => p[1]);
   const [minLat, maxLat, minLon, maxLon] = [Math.min(...lats), Math.max(...lats), Math.min(...lons), Math.max(...lons)];
@@ -147,10 +162,10 @@ function mapSvg(steps) {
     const [x, y] = xy(r.lat, r.lon);
     s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.5" fill="var(--${r.park_id === 16 ? "dl" : "dca"})" opacity=".3"><title>${esc(r.name)}</title></circle>`;
   }
-  const path = [[START.lat, START.lon], ...steps.map((st) => [st.lat, st.lon])].map(([a, b]) => xy(a, b));
+  const path = [[from.lat, from.lon], ...steps.map((st) => [st.lat, st.lon])].map(([a, b]) => xy(a, b));
   s += `<polyline points="${path.map((p) => p.map((v) => v.toFixed(1)).join(",")).join(" ")}" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" opacity=".75"/>`;
   const [sx0, sy0] = path[0];
-  s += `<rect x="${sx0 - 6}" y="${sy0 - 6}" width="12" height="12" fill="var(--ink)"><title>Start: Esplanade</title></rect>`;
+  s += `<rect x="${sx0 - 6}" y="${sy0 - 6}" width="12" height="12" fill="var(--ink)"><title>Start: ${esc(from.name)}</title></rect>`;
   steps.forEach((st, i) => {
     const [x, y] = path[i + 1];
     s += `<g><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="10" fill="var(--accent)"/><text x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent-ink)">${i + 1}</text><title>${esc(st.ride)}</title></g>`;
@@ -162,20 +177,37 @@ function renderPlan(data) {
   const p = data.plan, b = data.baseline_nearest;
   const saved = b ? Math.round(b.finish - p.finish) : 0;
   let html = `<div class="stats">
-    <div class="stat"><b>${clock(p.finish)}</b><span>done with last ride</span></div>
+    <div class="stat"><b>${clock(p.steps[p.steps.length - 1].ride_end)}</b><span>done with last ride</span></div>
     <div class="stat"><b>${Math.round(p.total_wait)} min</b><span>in lines</span></div>
     <div class="stat"><b>${Math.round(p.total_walk)} min</b><span>walking</span></div>
     <div class="stat"><b>${p.expanded}</b><span>states searched</span></div></div>
     <p class="note">Waits: ${esc(data.waits)}. ${saved > 0 ? `<span class="good">${saved} min sooner</span> than always walking to the nearest ride.` : "Same as walking to the nearest ride each time."}</p>`;
-  html += mapSvg(p.steps);
-  html += `<table><thead><tr><th>#</th><th>Ride</th><th>Walk</th><th>Get in line</th><th>Wait</th><th>Off ride</th></tr></thead><tbody>`;
+  html += mapSvg(p.steps, data.start_point);
+  html += `<table><thead><tr><th>#</th><th>Ride</th><th>Walk</th><th>Get in line</th><th>Wait</th><th>Off ride</th><th></th></tr></thead><tbody>`;
   p.steps.forEach((s, i) => {
     const rest = s.join_line - s.arrive > 0.5 ? ` <span class="count">(rest ${Math.round(s.join_line - s.arrive)} min)</span>` : "";
     html += `<tr><td class="n">${i + 1}</td><td>${esc(s.ride)}</td><td>${Math.round(s.walk_minutes)} min</td>
-             <td>${clock(s.join_line)}${rest}</td><td>${Math.round(s.wait_minutes)} min</td><td>${clock(s.ride_end)}</td></tr>`;
+             <td>${clock(s.join_line)}${rest}</td><td>${Math.round(s.wait_minutes)} min</td><td>${clock(s.ride_end)}</td>
+             <td>${i < p.steps.length - 1 ? `<button class="done" data-i="${i}" title="Mark this and the rides before it as done, then re-plan from here with fresh waits">Done, re-plan</button>` : ""}</td></tr>`;
   });
   $("out").innerHTML = html + "</tbody></table>";
+  LAST = p.steps;
 }
+
+// "Done, re-plan": you finished ride i. Drop it and the rides before it,
+// start from there at the current park time, and search again with fresh waits.
+$("out").addEventListener("click", (e) => {
+  const btn = e.target.closest("button.done");
+  if (!btn) return;
+  const i = Number(btn.dataset.i);
+  LAST.slice(0, i + 1).forEach((st) => picked.delete(st.ride_id));
+  $("from").value = String(LAST[i].ride_id);
+  $("start").value = parkNow();
+  $("date").value = parkToday();
+  renderList();
+  updateCount();
+  $("go").click();
+});
 
 $("go").addEventListener("click", async () => {
   $("go").disabled = true;
@@ -184,7 +216,8 @@ $("go").addEventListener("click", async () => {
     const res = await fetch("/api/plan", {
       method: "POST", headers: {"Content-Type": "application/json"},
       body: JSON.stringify({ride_ids: [...picked], start: $("start").value, close: $("close").value,
-                            mode: $("mode").value, date: $("date").value}),
+                            mode: $("mode").value, date: $("date").value,
+                            from_ride_id: $("from").value ? Number($("from").value) : null}),
     });
     const data = await res.json();
     if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Request failed");
@@ -196,12 +229,15 @@ $("go").addEventListener("click", async () => {
 
 fetch("/api/rides").then((r) => r.json()).then((d) => {
   RIDES = d.rides; START = d.start; MAX = d.max_rides;
+  const opts = RIDES.filter((r) => !r.single_rider).slice().sort((a, b) => a.name.localeCompare(b.name));
+  $("from").insertAdjacentHTML("beforeend", opts.map((r) => `<option value="${r.id}">${esc(r.name)}</option>`).join(""));
+  if (!d.model_ready) $("hint").textContent = "The prediction model is still collecting data, so plans use live waits for now.";
   // Shareable links: ?rides=284,279&start=09:00&mode=live
   const qs = new URLSearchParams(location.search);
   for (const id of (qs.get("rides") || "").split(",").map(Number)) {
     if (RIDES.some((r) => r.id === id) && picked.size < MAX) picked.add(id);
   }
-  for (const k of ["start", "close", "mode", "date"]) if (qs.get(k)) $(k).value = qs.get(k);
+  for (const k of ["start", "close", "mode", "date", "from"]) if (qs.get(k)) $(k).value = qs.get(k);
   renderList();
   updateCount();
   if (picked.size) $("go").click();

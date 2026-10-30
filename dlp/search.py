@@ -90,23 +90,24 @@ def _simulate(order: list[int], start: float, profile: WaitProfile,
     return steps
 
 
-def _make_plan(order, start, profile, walk, expanded, algorithm) -> Plan:
-    steps = _simulate(order, start, profile, walk)
+def _make_plan(order, start, profile, walk, expanded, algorithm, start_node=START) -> Plan:
+    steps = _simulate(order, start, profile, walk, start_node)
     assert steps is not None
     return Plan(order, steps, start, steps[-1].ride_end if steps else start, expanded, algorithm)
 
 
 def plan_astar(ride_ids: list[int], start: float, profile: WaitProfile,
-               use_heuristic: bool = True) -> Plan:
+               use_heuristic: bool = True, start_node: int = START) -> Plan:
+    """start_node: START (the Esplanade) or the id of the ride you are standing at."""
     rides = load_rides()
-    ride_ids = list(dict.fromkeys(ride_ids))
-    unknown = [r for r in ride_ids if r not in rides]
+    ride_ids = [r for r in dict.fromkeys(ride_ids) if r != start_node]
+    unknown = [r for r in ride_ids + [start_node] if r != START and r not in rides]
     if unknown:
         raise ValueError(f"unknown ride ids: {unknown}")
     n = len(ride_ids)
     if n == 0:
         return Plan([], [], start, start, 0)
-    nodes = [START] + ride_ids
+    nodes = [start_node] + ride_ids
     walk = walk_matrix(nodes)
     bit = {rid: 1 << i for i, rid in enumerate(ride_ids)}
     full = (1 << n) - 1
@@ -130,10 +131,10 @@ def plan_astar(ride_ids: list[int], start: float, profile: WaitProfile,
             total += dur[r] + mw + entry
         return total
 
-    best_t: dict[tuple[int, int], float] = {(START, full): start}
-    parent: dict[tuple[int, int], tuple[int, int] | None] = {(START, full): None}
+    best_t: dict[tuple[int, int], float] = {(start_node, full): start}
+    parent: dict[tuple[int, int], tuple[int, int] | None] = {(start_node, full): None}
     tie = itertools.count()
-    frontier = [(start + h(START, full, start), next(tie), start, START, full)]
+    frontier = [(start + h(start_node, full, start), next(tie), start, start_node, full)]
     expanded = 0
     while frontier:
         _, _, t, loc, mask = heapq.heappop(frontier)
@@ -145,7 +146,7 @@ def plan_astar(ride_ids: list[int], start: float, profile: WaitProfile,
                 order.append(key[0])
                 key = parent[key]
             return _make_plan(order[::-1], start, profile, walk, expanded,
-                              "astar" if use_heuristic else "ucs")
+                              "astar" if use_heuristic else "ucs", start_node)
         expanded += 1
         for r in members(mask):
             _, board = profile.best_boarding(r, t + walk[(loc, r)])
@@ -161,17 +162,18 @@ def plan_astar(ride_ids: list[int], start: float, profile: WaitProfile,
     raise Infeasible("no order fits before closing time (a ride may be closed)")
 
 
-def plan_ucs(ride_ids: list[int], start: float, profile: WaitProfile) -> Plan:
-    return plan_astar(ride_ids, start, profile, use_heuristic=False)
+def plan_ucs(ride_ids: list[int], start: float, profile: WaitProfile, start_node: int = START) -> Plan:
+    return plan_astar(ride_ids, start, profile, use_heuristic=False, start_node=start_node)
 
 
-def plan_brute_force(ride_ids: list[int], start: float, profile: WaitProfile) -> Plan:
+def plan_brute_force(ride_ids: list[int], start: float, profile: WaitProfile, start_node: int = START) -> Plan:
     """Try every order. Only for checking the search on small inputs."""
-    walk = walk_matrix([START] + ride_ids)
+    ride_ids = [r for r in ride_ids if r != start_node]
+    walk = walk_matrix([start_node] + ride_ids)
     best, count = None, 0
     for order in itertools.permutations(ride_ids):
         count += 1
-        steps = _simulate(list(order), start, profile, walk)
+        steps = _simulate(list(order), start, profile, walk, start_node)
         if steps and (best is None or steps[-1].ride_end < best[1][-1].ride_end):
             best = (list(order), steps)
     if best is None:
@@ -179,12 +181,14 @@ def plan_brute_force(ride_ids: list[int], start: float, profile: WaitProfile) ->
     return Plan(best[0], best[1], start, best[1][-1].ride_end, count, "brute-force")
 
 
-def plan_greedy(ride_ids: list[int], start: float, profile: WaitProfile, rule: str = "nearest") -> Plan:
+def plan_greedy(ride_ids: list[int], start: float, profile: WaitProfile, rule: str = "nearest",
+                start_node: int = START) -> Plan:
     """What people usually do: go to the closest ride next ("nearest") or the
     ride with the shortest line right now ("shortest-wait"). Used as a baseline."""
-    walk = walk_matrix([START] + ride_ids)
+    ride_ids = [r for r in ride_ids if r != start_node]
+    walk = walk_matrix([start_node] + ride_ids)
     rides = load_rides()
-    loc, t, left, order = START, start, list(ride_ids), []
+    loc, t, left, order = start_node, start, list(ride_ids), []
     while left:
         def score(r):
             if rule == "nearest":
@@ -197,4 +201,4 @@ def plan_greedy(ride_ids: list[int], start: float, profile: WaitProfile, rule: s
         order.append(r)
         left.remove(r)
         loc, t = r, board + rides[r].ride_minutes
-    return _make_plan(order, start, profile, walk, 0, f"greedy-{rule}")
+    return _make_plan(order, start, profile, walk, 0, f"greedy-{rule}", start_node)

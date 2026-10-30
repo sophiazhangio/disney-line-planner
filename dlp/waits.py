@@ -106,3 +106,44 @@ def live_profile(close_minute: float = DAY) -> WaitProfile:
     live = fetch_live_waits()
     waits = {rid: (v["wait"] if v["is_open"] else math.inf) for rid, v in live.items()}
     return constant_profile(waits, close_minute, source="live")
+
+
+def blend_profile(pred: WaitProfile, live: dict[int, dict], now: float,
+                  tau: float = 60.0, closed_minutes: float = 60.0) -> WaitProfile:
+    """Correct a predicted day using the waits posted right now.
+
+    Live waits are the best guess for the next half hour, predictions for later
+    in the day. So each ride's forecast is shifted by today's error
+    (live - predicted, at `now`), and that shift fades out with time:
+
+        wait(t) = predicted(t) + (live - predicted(now)) * exp(-(t - now) / tau)
+
+    A ride that is closed right now is treated as closed for `closed_minutes`,
+    then follows the prediction again. Slots before `now` are left unchanged.
+    """
+    slots: dict[int, list[float]] = {}
+    size = pred.slot_minutes
+    for rid, waits in pred.slots.items():
+        lv = live.get(rid)
+        if lv is None:
+            slots[rid] = list(waits)
+            continue
+        out = list(waits)
+        p_now = pred.wait(rid, now)
+        for i, p in enumerate(waits):
+            start, mid = i * size, i * size + size / 2
+            if start + size <= now:
+                continue  # already in the past
+            dt = max(0.0, mid - now)
+            if not lv["is_open"]:
+                out[i] = math.inf if start < now + closed_minutes else p
+            elif math.isinf(p_now) or math.isinf(p):
+                # The model expected it closed but it is open: use the live wait
+                # for the next hour, then trust the model's opening hours.
+                out[i] = lv["wait"] if start < now + 60 else p
+            else:
+                out[i] = max(0.0, p + (lv["wait"] - p_now) * math.exp(-dt / tau))
+            if start <= now < start + size and lv["is_open"]:
+                out[i] = lv["wait"]  # the slot we are in now: exactly what is posted
+        slots[rid] = out
+    return WaitProfile(slots, size, pred.close_minute, source=f"live now, {pred.source} later")

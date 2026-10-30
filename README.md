@@ -45,8 +45,18 @@ Walking time = straight-line distance × 1.35 (paths aren't straight) at 70 m/mi
 
 The planner uses the model's predictions in 15-minute slots for a future visit date. A ride is treated as closed in slots where it was usually closed in the history.
 
+**Live now, predicted later.** On the day itself, the posted wait is the best guess for the next half hour and the model is the best guess for later. [`blend_profile`](dlp/waits.py) shifts each ride's predicted curve by today's error and lets that shift fade out:
+
+```
+wait(t) = predicted(t) + (live_now - predicted(now)) * exp(-(t - now) / 60 min)
+```
+
+So if Space Mountain is 30 minutes busier than usual right now, the plan expects it to be busier for the next hour or so, then back to normal. A ride that is closed right now is treated as closed for an hour. Before the model is trained, the app uses live waits only and says so.
+
 ### 4. Web app
-`app/` is a FastAPI server with one plain HTML/JS page: pick rides (live waits shown next to each), a start time and live or predicted waits; get a route map, a timeline, and how much sooner it is than always walking to the nearest ride.
+`app/` is a FastAPI server with one plain HTML/JS page: pick rides (live waits shown next to each), a start time, where you are, and which waits to use (live now + predicted later by default); get a route map, a timeline, and how much sooner it is than always walking to the nearest ride.
+
+**Re-plan as you go.** Waits keep changing, so in the park the plan is re-run after each ride, the way a map app re-routes when traffic changes. Each step has a "Done, re-plan" button: it drops the rides already done and searches again from that ride, at the current time, with fresh waits. Only the next step has to be right each time, and that is where live waits are most accurate. Links like `/?rides=284,279&start=09:00&from=289` also work.
 
 ## Results
 
@@ -83,6 +93,7 @@ Other scripts: `python scripts/build_rides.py` rebuilds `data/rides.csv` from th
 ## Limits
 
 - Posted waits are Disney's estimates, not measured times.
+- "Live only" mode assumes today's posted waits hold for the rest of the day. That is only reasonable for the next ride or two; use the default mode and re-plan after each ride.
 - Ride lengths are approximate; walking uses straight-line distance with a detour factor, not real paths.
 - Lightning Lane, single rider lines, shows with fixed times and breakdowns are not modeled.
 
