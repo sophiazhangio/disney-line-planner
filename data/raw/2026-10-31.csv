@@ -260,3 +260,90 @@ timestamp_utc,park_id,park,ride_id,ride,land,is_open,wait_time,last_updated
 2026-10-31T15:50:10Z,17,Disney California Adventure,5146,Guardians of the Galaxy - Monsters After Dark,Halloween,1,20,2026-10-31T15:45:38.000Z
 2026-10-31T15:50:10Z,17,Disney California Adventure,4723,Mater's Graveyard JamBOOree,Halloween,1,5,2026-10-31T15:45:38.000Z
 2026-10-31T15:50:10Z,17,Disney California Adventure,7292,Villains Grove at Oogie Boogie Bash,Halloween,0,0,2026-10-31T15:45:38.000Z
+2026-10-31T19:44:30Z,16,Disneyland,12428,Adventureland Treehouse inspired by Walt Disney’s Swiss Family Robinson,Adventureland,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,326,Indiana Jones™ Adventure,Adventureland,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,296,Jungle Cruise,Adventureland,1,30,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,288,Walt Disney's Enchanted Tiki Room,Adventureland,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,304,Davy Crockett's Explorer Canoes,Bayou Country,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,306,The Many Adventures of Winnie the Pooh,Bayou Country,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,14168,Tiana's Bayou Adventure,Bayou Country,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,14326,Tiana's Bayou Adventure Single Rider,Bayou Country,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,307,"""it's a small world""",Fantasyland,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,285,Alice in Wonderland,Fantasyland,1,20,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,303,Casey Jr. Circus Train,Fantasyland,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,275,Dumbo the Flying Elephant,Fantasyland,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,277,King Arthur Carrousel,Fantasyland,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,278,Mad Tea Party,Fantasyland,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,279,Matterhorn Bobsleds,Fantasyland,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,6711,Meet Disney Princesses at Royal Hall,Fantasyland,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,280,Mr. Toad's Wild Ride,Fantasyland,1,15,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,281,Peter Pan's Flight,Fantasyland,1,30,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,282,Pinocchio's Daring Journey,Fantasyland,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,687,Sleeping Beauty Castle Walkthrough,Fantasyland,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,283,Snow White's Enchanted Wish,Fantasyland,1,15,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,305,Storybook Land Canal Boats,Fantasyland,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,323,Big Thunder Mountain Railroad,Frontierland,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,679,Frontierland Shootin' Exposition,Frontierland,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,456,Mark Twain Riverboat,Frontierland,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,331,Pirate's Lair on Tom Sawyer Island,Frontierland,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,328,Sailing Ship Columbia,Frontierland,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,674,Disneyland Railroad,Main Street U.S.A,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,690,Great Moments with Mr. Lincoln,Main Street U.S.A,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,686,Main Street Cinema,Main Street U.S.A,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,691,Main Street Vehicles,Main Street U.S.A,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,14915,Opera House - Walt Disney - A Magical Life,Main Street U.S.A,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,695,The Disney Gallery,Main Street U.S.A,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,14923,Walt Disney - A Magical Life,Main Street U.S.A,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,324,Chip 'n' Dale's GADGETcoaster,Mickey's Toontown,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,13814,Donald's Duck Pond,Mickey's Toontown,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,11980,Goofy's How-to-Play Yard,Mickey's Toontown,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,11526,Mickey & Minnie's Runaway Railway,Mickey's Toontown,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,709,Mickey's House and Meet Mickey Mouse,Mickey's Toontown,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,684,Minnie's House,Mickey's Toontown,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,332,Roger Rabbit's Car Toon Spin,Mickey's Toontown,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,325,Haunted Mansion Holiday,New Orleans Square,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,289,Pirates of the Caribbean,New Orleans Square,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,6339,Millennium Falcon: Smugglers Run,Star Wars: Galaxy's Edge,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,10903,Millennium Falcon: Smugglers Run Single Rider,Star Wars: Galaxy's Edge,0,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,6340,Star Wars: Rise of the Resistance,Star Wars: Galaxy's Edge,1,40,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,287,Astro Orbitor,Tomorrowland,1,20,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,317,Autopia,Tomorrowland,1,20,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,273,Buzz Lightyear Astro Blasters,Tomorrowland,1,15,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,274,Disneyland Monorail,Tomorrowland,1,5,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,276,Finding Nemo Submarine Voyage,Tomorrowland,1,15,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,16627,Pixar Short Film Spotlight,Tomorrowland,1,0,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,284,Space Mountain,Tomorrowland,1,25,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,16,Disneyland,286,Star Tours - The Adventures Continue,Tomorrowland,1,10,2026-10-31T19:40:33.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,329,Guardians of the Galaxy - Mission: BREAKOUT!,Avengers Campus,0,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,8843,WEB SLINGERS: A Spider-Man Adventure,Avengers Campus,0,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,10907,WEB SLINGERS: A Spider-Man Adventure Single Rider,Avengers Campus,0,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,2608,Luigi's Honkin' Haul-O-Ween,Cars Land,1,20,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,295,Radiator Springs Racers,Cars Land,1,40,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,10904,Radiator Springs Racers Single Rider,Cars Land,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,302,Grizzly River Run,Grizzly Peak,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,293,Redwood Creek Challenge Trail,Grizzly Peak,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,17129,Soarin’ Across America,Grizzly Peak,1,20,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,321,Animation Academy,Hollywood Land,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,6440,Mickey's PhilharMagic,Hollywood Land,1,10,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,291,"Monsters, Inc. Mike & Sulley to the Rescue!",Hollywood Land,1,20,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,868,Sorcerer's Workshop,Hollywood Land,0,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,294,Turtle Talk with Crush,Hollywood Land,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,869,The Bakery Tour,Pacific Wharf,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,298,Golden Zephyr,Paradise Gardens Park,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,319,Goofy's Sky School,Paradise Gardens Park,1,20,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,301,Silly Symphony Swings,Paradise Gardens Park,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,10905,Silly Symphony Swings Single Rider,Paradise Gardens Park,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,316,The Little Mermaid - Ariel's Undersea Adventure,Paradise Gardens Park,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,11528,World of Color – ONE,Paradise Gardens Park,0,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,866,Games of Pixar Pier,Pixar Pier,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,322,Incredicoaster,Pixar Pier,1,10,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,10906,Incredicoaster Single Rider,Pixar Pier,1,0,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,6643,Inside Out Emotional Whirlwind,Pixar Pier,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,310,Jessie's Critter Carousel,Pixar Pier,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,300,Jumpin' Jellyfish,Pixar Pier,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,311,Pixar Pal-A-Round - Swinging,Pixar Pier,1,10,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,5557,Pixar Pal-A-Round – Non-Swinging,Pixar Pier,1,10,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,313,Toy Story Midway Mania!,Pixar Pier,1,25,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,5146,Guardians of the Galaxy - Monsters After Dark,Halloween,1,25,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,4723,Mater's Graveyard JamBOOree,Halloween,1,5,2026-10-31T19:40:36.000Z
+2026-10-31T19:44:30Z,17,Disney California Adventure,7292,Villains Grove at Oogie Boogie Bash,Halloween,0,0,2026-10-31T19:40:36.000Z
